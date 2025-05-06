@@ -58,13 +58,37 @@
 }
 
 /* SPACING */
-:root{
-    --content-min: 320px;
-    --content-maxk: 480px;
+:root {
+  /* content */
+  --content-min: 320px;
+  --content-max: 480px;
+
+  /* margin */
+  --margin-side: 0.5rem;
+  --margin-tb: 1.5rem;
+
+  /* gap */
+  --gap-8: 0.5rem;
+  --gap-16: 1rem;
+  --gap-24: 1.5rem;
+  --gap-32: 2rem;
+  --gap-40: 2.5rem;
+  --gap-48: 3rem;
+  --gap-64: 4rem;
+  --gap-96: 6rem;
+  --gap-128: 8rem;
+  --gap-200: 12.5rem;
+  --gap-300: 18.75rem;
 }
+
 @media (min-width: 1120px) {
-:root{
-    --content-min: 1120px
+  :root {
+    /* content */
+    --content-min: 1120px;
     --content-max: 1420px;
-}
+
+    /* margin */
+    --margin-side: 4rem;
+    --margin-tb: 2rem;
+  }
 }
