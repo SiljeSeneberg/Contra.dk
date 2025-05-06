@@ -1,21 +1,37 @@
 ---
-const { text } = Astro.props;
+const { variant } = Astro.props;
 ---
 
-<button>{text}</button>
-
+<button class={variant}><slot /></button>
 
 <style>
-button {
-  background-color: transparent
-  border-color: var(--btn);
-  color: var(--btn);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+  button {
+    font-family: var(--secondary-header);
+    font-size: var(--xs-size);
+    font-weight: var(--regular-weight);
+    text-transform: uppercase;
+    border: 1px solid var(--btn);
+    padding: var(--gap-8) var(--gap-32);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .primary {
+    background-color: var(--btn);
+    color: var(--btn-hover-text);
+  }
+  .primary:hover {
+    background-color: transparent;
+    color: var(--btn);
+  }
+
+  .secondary {
+    background-color: transparent;
+    color: var(--btn);
+  }
+  .secondary:hover {
+    background-color: var(--btn);
+    color: var(--btn-hover-text);
+  }
 </style>

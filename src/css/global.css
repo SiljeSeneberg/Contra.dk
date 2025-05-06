@@ -6,6 +6,7 @@
 
 body {
   background-color: var(--background);
+  color: var(--primary-text);
 }
 
 li {
@@ -59,10 +60,10 @@ main {
   text-transform: uppercase;
 }
 
-p{
-    font-family: var(--body-text);
-    font-size: var(--s-size);
-    font-weight: var(--regular-weight);
+p {
+  font-family: var(--body-text);
+  font-size: var(--s-size);
+  font-weight: var(--regular-weight);
 }
 
 /* IMG - VIDEO */
