@@ -56,3 +56,15 @@
     /* line-height??? */
   }
 }
+
+/* SPACING */
+:root{
+    --content-min: 320px;
+    --content-maxk: 480px;
+}
+@media (min-width: 1120px) {
+:root{
+    --content-min: 1120px
+    --content-max: 1420px;
+}
+}
