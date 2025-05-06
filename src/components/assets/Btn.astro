@@ -1,8 +1,21 @@
 ---
-
+const { text } = Astro.props;
 ---
 
-<button>hej</button>
+<button>{text}</button>
 
 
-<style></style>
+<style>
+button {
+  background-color: transparent
+  border-color: var(--btn);
+  color: var(--btn);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
