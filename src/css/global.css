@@ -1,0 +1,75 @@
+@import url(variables.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+}
+
+li {
+  list-style-type: none;
+}
+
+/* LAYOUT */
+main {
+  display: grid;
+  grid-template-columns:
+    minmax(var(--margin-side), 1fr) minmax(
+      var(--content-min),
+      var(--content-max)
+    )
+    minmax(var(--margin-side), 1fr);
+}
+
+/* TEXT */
+.h1_bold {
+  font-family: var(--primary-header);
+  font-size: var(--xl-size);
+  font-weight: var(--bold-weight);
+  text-transform: uppercase;
+}
+
+.h1_regular {
+  font-family: var(--primary-header);
+  font-size: var(--xl-size);
+  font-weight: var(--regular-weight);
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: var(--primary-header);
+  font-size: var(--xxl-size);
+  font-weight: var(--regular-weight);
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: var(--secondary-header);
+  font-size: var(--m-size);
+  font-weight: var(--regular-weight);
+  text-transform: uppercase;
+}
+
+.h4 {
+  font-family: var(--secondary-header);
+  font-size: var(--xs-size);
+  font-weight: var(--regular-weight);
+  text-transform: uppercase;
+}
+
+p{
+    font-family: var(--body-text);
+    font-size: var(--s-size);
+    font-weight: var(--regular-weight);
+}
+
+/* IMG - VIDEO */
+img,
+video,
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
