@@ -107,6 +107,30 @@ import Link from "../assets/Link.astro";
   .burger_menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  @media screen and (min-width: 1120px) {
+    header {
+      display: flex;
+    }
+    .bar {
+      display: none;
+    }
+    .nav_menu {
+      display: block;
+      position: fixed;
+      background-color: var(--white-70);
+      backdrop-filter: blur(4px);
+    }
+    .nav_menu ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: var(--gap-16);
+      padding-right: var(--gap-16);
+      padding-top: var(--gap-16);
+      padding-bottom: var(--gap-16);
+    }
+  }
 </style>
 <script>
   const hamburger = document.querySelector(".burger_menu");
