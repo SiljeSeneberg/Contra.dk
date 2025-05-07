@@ -1,0 +1,121 @@
+---
+import "../assets/Btn.astro";
+import "../assets/Link.astro";
+import "../../css/global.css";
+import "../../css/variables.css";
+import Link from "../assets/Link.astro";
+---
+
+<header class="header">
+  <!-- Mobil menu layout -->
+  <div class="navigation">
+    <a href="#header"><img src="../public/logo.png" alt="logo" /></a>
+    <div class="burger_menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="nav_menu">
+    <ul>
+      <li class="nav_item"><a href="#what"><Link variant="primary">what is contra?</Link></a></li>
+      <li class="nav_item"><a href="#who"><Link variant="primary">who are we?</Link></a></li>
+      <li class="nav_item"><a href="#events"><Link variant="primary">our events</Link></a></li>
+      <li class="nav_item"><a href="#guests"><Link variant="primary">guest of contra</Link></a></li>
+    </ul>
+  </div>
+</header>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
+  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
+  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
+  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
+  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
+</p>
+
+<style>
+  img {
+    width: 80px;
+    height: auto;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--gap-16);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-70);
+    backdrop-filter: blur(4px);
+  }
+  .bar {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 8px auto;
+    background-color: var(--blue);
+    border-radius: 10px;
+    transition: all 0.4 ease-in-out;
+  }
+  .nav_menu {
+    display: none;
+    position: fixed;
+    background-color: var(--white-70);
+    backdrop-filter: blur(4px);
+  }
+  .nav_menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-64);
+    padding-left: var(--gap-16);
+    padding-right: var(--gap-16);
+    padding-top: var(--gap-96);
+    padding-bottom: var(--gap-64);
+  }
+  .nav_menu.active {
+    display: block;
+    right: 0;
+  }
+  .burger_menu {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  .burger_menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger_menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .burger_menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>
+<script>
+  const hamburger = document.querySelector(".burger_menu");
+  const navMenu = document.querySelector(".nav_menu");
+
+  hamburger.addEventListener("click", mobileMenu);
+
+  function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  }
+</script>
