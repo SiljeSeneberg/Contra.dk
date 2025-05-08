@@ -33,10 +33,11 @@
   --bold-weight: 700;
 
   /* size */
-  --xs-size: 1.25rem;
-  --s-size: 1.5rem;
-  --m-size: 2rem;
-  --l-size: 2.5rem;
+  --xxs-size: 0.75rem;
+  --xs-size: 1.125rem;
+  --s-size: 1.25rem;
+  --m-size: 1.5rem;
+  --l-size: 2rem;
   --xl-size: 3rem;
   --xxl-size: 3rem;
 
@@ -46,10 +47,11 @@
 @media (min-width: 1120px) {
   :root {
     /* size */
-    --xs-size: 1.5rem;
-    --s-size: 2rem;
-    --m-size: 3rem;
-    --l-size: 4rem;
+    --xxs-size: 1rem;
+    --xs-size: 1.25rem;
+    --s-size: 1.5rem;
+    --m-size: 2rem;
+    --l-size: 3rem;
     --xl-size: 6rem;
     --xxl-size: 7.5rem;
 
