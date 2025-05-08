@@ -108,10 +108,17 @@ import Link from "../assets/Link.astro";
     transform-origin: center;
   }
   .nav_menu {
-    display: none;
+    display: block;
     position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 248px;
+    height: 100vh;
+    transform: translateX(100%);
     background-color: var(--white-70);
     backdrop-filter: blur(4px);
+    transition: transform 0.3s ease-in-out;
   }
   .nav_menu ul {
     display: flex;
@@ -126,6 +133,7 @@ import Link from "../assets/Link.astro";
     display: block;
     right: 0;
     top: 0;
+    transform: translateX(0%);
   }
   .burger_menu {
     display: block;
@@ -141,10 +149,10 @@ import Link from "../assets/Link.astro";
     opacity: 0;
   }
   .burger_menu.active .bar:nth-child(1) {
-    transform: translate(6px, 6px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
   }
   .burger_menu.active .bar:nth-child(3) {
-    transform: translate(6px, -6px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
   }
 
   @media screen and (min-width: 1120px) {
