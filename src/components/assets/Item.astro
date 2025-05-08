@@ -1,9 +1,9 @@
 ---
-
+const { text } = Astro.props;
+const { link } = Astro.props;
 ---
 
-<div>
-    <img src="" alt="">
-</div>
-
-<style></style>
+<article>
+    <slot />
+    <a href="{link}">{text}</a>
+</article>
