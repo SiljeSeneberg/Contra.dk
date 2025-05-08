@@ -1,9 +1,26 @@
 ---
 const { text } = Astro.props;
 const { link } = Astro.props;
+
+import Link from './Link.astro';
 ---
 
 <article>
     <slot />
-    <a href="{link}">{text}</a>
+    <Link>{text}</Link>
 </article>
+
+<style>
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: var(--margin-tb);
+        margin-left: var(--margin-side);
+        margin-right: var(--margin-side);
+    }
+    article a {
+        font-size: var(--xxs-size);
+    }
+</style>
