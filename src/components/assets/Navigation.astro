@@ -7,50 +7,52 @@ import Link from "../assets/Link.astro";
 ---
 
 <header class="header">
+  <nav class="desktop_nav">
+    <div class="desktop_nav_wrapper">
+      <ul class="ul_left">
+        <li><a href="#what"><Link variant="primary">What is Contra?</Link></a></li>
+        <li><a href="#who"><Link variant="primary">Who are we?</Link></a></li>
+      </ul>
+
+      <div class="logo">
+        <a href="#header"><img src="/logo.png" alt="logo" /></a>
+      </div>
+      <ul class="ul_right">
+        <li><a href="#events"><Link variant="primary">Our events</Link></a></li>
+        <li><a href="#guests"><Link variant="primary">Guest of Contra</Link></a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Mobil menu layout -->
+
+  <div class="nav_menu">
+    <ul>
+      <li><a href="#what"><Link variant="primary">What is Contra?</Link></a></li>
+      <li><a href="#who"><Link variant="primary">Who are we?</Link></a></li>
+      <li><a href="#events"><Link variant="primary">Our events</Link></a></li>
+      <li><a href="#guests"><Link variant="primary">Guest of Contra</Link></a></li>
+    </ul>
+  </div>
+
   <div class="navigation">
-    <a href="#header"><img src="../public/logo.png" alt="logo" /></a>
+    <a href="#header"><img src="/logo.png" alt="logo" /></a>
     <div class="burger_menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
   </div>
-
-  <!-- Menu -->
-  <div class="nav_menu">
-    <ul>
-      <li class="nav_item"><a href="#what"><Link variant="primary">what is contra?</Link></a></li>
-      <li class="nav_item"><a href="#who"><Link variant="primary">who are we?</Link></a></li>
-      <li class="nav_item"><a href="#events"><Link variant="primary">our events</Link></a></li>
-      <li class="nav_item"><a href="#guests"><Link variant="primary">guest of contra</Link></a></li>
-    </ul>
-  </div>
 </header>
-
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
-  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
-</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
-  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
-</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
-  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
-</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet dignissim leo, vitae iaculis libero tempus nec. Proin at vulputate massa. Suspendisse non sapien dapibus ipsum dignissim vehicula. Nullam hendrerit rhoncus porta. Quisque rutrum faucibus tincidunt. Maecenas venenatis enim eu nibh commodo viverra. Sed sagittis urna id tristique
-  dignissim. Maecenas id posuere neque, ac gravida nunc. Curabitur pharetra egestas semper. Proin at ligula accumsan, pulvinar elit ac, euismod metus.
-</p>
 
 <style>
   img {
-    width: 80px;
+    width: 70px;
     height: auto;
   }
-
+  .desktop_nav {
+    display: none;
+  }
   .navigation {
     position: fixed;
     top: 0;
@@ -61,8 +63,6 @@ import Link from "../assets/Link.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--white-70);
-    backdrop-filter: blur(4px);
   }
   .bar {
     display: block;
@@ -72,12 +72,20 @@ import Link from "../assets/Link.astro";
     background-color: var(--blue);
     border-radius: 10px;
     transition: all 0.4 ease-in-out;
+    transform-origin: center;
   }
   .nav_menu {
-    display: none;
+    display: block;
     position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 248px;
+    max-height: 488px;
+    transform: translateX(100%);
     background-color: var(--white-70);
     backdrop-filter: blur(4px);
+    transition: transform 0.3s ease-in-out;
   }
   .nav_menu ul {
     display: flex;
@@ -91,44 +99,63 @@ import Link from "../assets/Link.astro";
   .nav_menu.active {
     display: block;
     right: 0;
+    top: 0;
+    transform: translateX(0%);
   }
   .burger_menu {
     display: block;
+    position: absolute;
     cursor: pointer;
     position: relative;
     z-index: 10;
+  }
+  .burger_menu.active {
+    z-index: 20 !important;
   }
   .burger_menu.active .bar:nth-child(2) {
     opacity: 0;
   }
   .burger_menu.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
   }
   .burger_menu.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
   }
 
   @media screen and (min-width: 1120px) {
-    header {
-      display: flex;
-    }
-    .bar {
+    .navigation,
+    .nav_menu {
       display: none;
     }
-    .nav_menu {
-      display: block;
+    .desktop_nav {
       position: fixed;
+      display: flex;
+      padding: var(--gap-16);
       background-color: var(--white-70);
+      height: 60px;
       backdrop-filter: blur(4px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
     }
-    .nav_menu ul {
+    .desktop_nav_wrapper {
+      max-width: var(--content-max);
+      min-width: var(--content-min);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--gap-128);
+    }
+    .ul_left,
+    .ul_right {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      padding-left: var(--gap-16);
-      padding-right: var(--gap-16);
-      padding-top: var(--gap-16);
-      padding-bottom: var(--gap-16);
+      gap: var(--gap-128);
+      padding-left: 0;
+      /* margin-right: var(--gap-48); */
     }
   }
 </style>
