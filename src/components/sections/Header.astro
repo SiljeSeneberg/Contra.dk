@@ -1,0 +1,43 @@
+---
+import "../assets/Btn.astro";
+import "../assets/Link.astro";
+import "../../css/global.css";
+import "../../css/variables.css";
+import Link from "../assets/Link.astro";
+---
+
+<section id="header_section" class="header_sec">
+  <div class="title">
+    <h1 class="h1_bold">contra</h1><h1 class="h1_regular">house</h1>
+  </div>
+  <div class="header_video"><img src="../../../public/video_placeholder.png" alt="video_placeholder" /></div>
+  <div class="brand_names">
+    <ul>
+      <li><a href="#local_poke_mom"><Link variant="primary">lokal poke mom</Link></a></li>
+      <li><a href="#guldhammer"><Link variant="primary">guldhammer studio</Link></a></li>
+      <li><a href="#soriano"><Link variant="primary">studio soriano</Link></a></li>
+      <li><a href="#nvll+void"><Link variant="primary">nvll+void</Link></a></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  /*   .header_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } */
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+  }
+  .header_sec h1 {
+    margin: 0;
+  }
+  .brand_names {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
