@@ -1,0 +1,23 @@
+---
+import Item from '../assets/Item.astro';
+---
+
+<section id="items_section">
+<Item href="/#hey" text="Guldhammer studio"><img src="../../../public/img/gldhmr.png" alt="ring"></Item>
+<Item href="/#hey" text="Guldhammer studio"><img src="../../../public/img/gldhmr.png" alt="ring"></Item>
+<Item href="/#hey" text="Guldhammer studio"><img src="../../../public/img/gldhmr.png" alt="ring"></Item>
+<Item href="/#hey" text="Guldhammer studio"><img src="../../../public/img/gldhmr.png" alt="ring"></Item>
+</section>
+
+<style>
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap-16);
+        flex-wrap: wrap;
+        margin: var(--margin-tb);
+        min-width: var(--content-min);
+        max-width: var(--content-max);
+    }
+</style>

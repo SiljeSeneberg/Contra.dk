@@ -1,13 +1,12 @@
 ---
-const { text } = Astro.props;
-const { link } = Astro.props;
+const { text, href } = Astro.props;
 
 import Link from "./Link.astro";
 ---
 
 <article>
   <div><slot /></div>
-  <div class="show"><Link href="#guests" variant="primary">{text}</Link></div>
+  <div class="show"><Link href={href} variant="primary">{text}</Link></div>
 </article>
 
 <style>
@@ -23,25 +22,27 @@ import Link from "./Link.astro";
   div {
     width: 164px;
     height: auto;
+    
   }
   .show {
-    display: block;
-    width: fit-content;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     div {
       width: 264px;
       height: auto;
       margin: var(--margin-tb);
     }
     .show {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
     }
-
     article:hover .show {
-      display: block;
-      width: fit-content;
+      visibility: visible;
+      opacity: 1;
     }
   }
 </style>
