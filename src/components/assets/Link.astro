@@ -1,8 +1,8 @@
 ---
-const { variant } = Astro.props;
+const { href, variant } = Astro.props;
 ---
 
-<a class={variant}><slot /></a>
+<a href={href} class={variant}><slot /></a>
 
 <style>
 a{
