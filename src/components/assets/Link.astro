@@ -5,13 +5,15 @@ const { href, variant } = Astro.props;
 <a href={href} class={variant}><slot /></a>
 
 <style>
-a{
+  a {
     font-family: var(--secondary-header);
-    font-size: var(--xs-size);
+    font-size: var(--xxs-size);
     font-weight: var(--light-weight);
     text-transform: uppercase;
     cursoer: pointer;
-}
+    text-align: center;
+  }
+    
 
   .primary {
     color: var(--primary-text);
@@ -29,5 +31,11 @@ a{
   .secondary:hover {
     color: var(--primary-text);
     text-decoration: underline;
+  }
+
+  @media (min-width: 900px) {
+    a {
+      font-size: var(--xs-size);
+    }
   }
 </style>
