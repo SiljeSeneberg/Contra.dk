@@ -7,10 +7,12 @@ import Link from "../assets/Link.astro";
 ---
 
 <section id="header_section" class="header_sec">
-  <div class="title">
-    <h1 class="h1_bold">contra</h1><h1 class="h1_regular">house</h1>
+  <div class="title_video_wrapper">
+    <div class="title">
+      <h1 class="h1_bold">contra</h1><h1 class="h1_regular">house</h1>
+    </div>
+    <div class="header_video"><img src="../../../public/video_placeholder.png" alt="video_placeholder" /></div>
   </div>
-  <div class="header_video"><img src="../../../public/video_placeholder.png" alt="video_placeholder" /></div>
   <div class="brand_names">
     <ul>
       <li><Link href="#local_poke_mom" variant="primary">lokal poke mom</Link></li>
@@ -57,17 +59,27 @@ import Link from "../assets/Link.astro";
     min-height: auto;
     margin-bottom: var(--gap-32);
   }
+  .title_video_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-16);
+    align-self: stretch;
+  }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1120px) {
+    .header_sec {
+      max-width: var(--content-max);
+      min-width: var(--content-min);
+    }
     .brand_names ul {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      gap: var(--gap-128);
+      align-self: stretch;
     }
-    .brand_names {
-      min-width: var(--content-min);
-      max-width: var(--content-max);
-    }
+
     .title {
       margin-bottom: var(--gap-16);
     }
