@@ -15,6 +15,7 @@ import Link from "../assets/Link.astro";
     <ul>
       <li><Link href="#local_poke_mom" variant="primary">lokal poke mom</Link></li>
       <li><Link href="#guldhammer" variant="primary">guldhammer studio</Link></li>
+
       <li><Link href="#soriano" variant="primary">studio soriano</Link></li>
       <li><Link href="#nvll+void" variant="primary">nvll+void</Link></li>
     </ul>
@@ -50,9 +51,30 @@ import Link from "../assets/Link.astro";
   .brand_names ul li {
     white-space: nowrap;
   }
+
   .header_video {
     max-width: 300px;
     min-height: auto;
     margin-bottom: var(--gap-32);
+  }
+
+  @media screen and (min-width: 900px) {
+    .brand_names ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .brand_names {
+      min-width: var(--content-min);
+      max-width: var(--content-max);
+    }
+    .title {
+      margin-bottom: var(--gap-16);
+    }
+    .header_video {
+      min-width: 400px;
+      min-height: auto;
+      margin-bottom: var(--gap-16);
+    }
   }
 </style>
