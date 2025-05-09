@@ -14,15 +14,6 @@ li {
 }
 
 /* LAYOUT */
-main {
-  display: grid;
-  grid-template-columns:
-    minmax(var(--margin-side), 1fr) minmax(
-      var(--content-min),
-      var(--content-max)
-    )
-    minmax(var(--margin-side), 1fr);
-}
 
 /* TEXT */
 .h1_bold {
