@@ -13,21 +13,21 @@ import Link from "../assets/Link.astro";
   <div class="header_video"><img src="../../../public/video_placeholder.png" alt="video_placeholder" /></div>
   <div class="brand_names">
     <ul>
-      <li><a href="#local_poke_mom"><Link variant="primary">lokal poke mom</Link></a></li>
-      <li><a href="#guldhammer"><Link variant="primary">guldhammer studio</Link></a></li>
-      <li><a href="#soriano"><Link variant="primary">studio soriano</Link></a></li>
-      <li><a href="#nvll+void"><Link variant="primary">nvll+void</Link></a></li>
+      <li><Link href="#local_poke_mom" variant="primary">lokal poke mom</Link></li>
+      <li><Link href="#guldhammer" variant="primary">guldhammer studio</Link></li>
+      <li><Link href="#soriano" variant="primary">studio soriano</Link></li>
+      <li><Link href="#nvll+void" variant="primary">nvll+void</Link></li>
     </ul>
   </div>
 </section>
 
 <style>
-  /*   .header_sec {
+  .header_sec {
+    margin-top: var(--gap-128);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-  } */
+  }
   .title {
     display: flex;
     flex-direction: column;
@@ -36,8 +36,13 @@ import Link from "../assets/Link.astro";
   .header_sec h1 {
     margin: 0;
   }
-  .brand_names {
+  .brand_names ul {
     display: flex;
     flex-direction: column;
+    gap: var(--gap-32);
+  }
+  .header_video {
+    min-width: 360px;
+    min-height: auto;
   }
 </style>
