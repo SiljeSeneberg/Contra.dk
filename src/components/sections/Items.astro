@@ -24,11 +24,13 @@ import Item from '../assets/Item.astro';
      @media (min-width: 900px){
     section{
         display: flex;
+         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: var(--gap-16);
         flex-wrap: wrap;
-        margin: var(--margin-tb);
+        padding-top: var(--gap-200);
+        padding-bottom: var(--gap-200);
         min-width: var(--content-min);
         max-width: var(--content-max);
     }}

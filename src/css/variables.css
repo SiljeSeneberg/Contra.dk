@@ -71,6 +71,8 @@
   --margin-tb: 1.5rem;
 
   /* gap */
+  --gap-0: 0rem;
+  --gap-4: 0.25rem;
   --gap-8: 0.5rem;
   --gap-16: 1rem;
   --gap-24: 1.5rem;
