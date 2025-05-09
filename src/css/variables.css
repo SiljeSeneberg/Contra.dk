@@ -84,11 +84,11 @@
   --gap-300: 18.75rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1120px) {
   :root {
     /* content */
-    --content-min: 900px;
-    --content-max: 1420px;
+    --content-min: 1120px;
+    --content-max: 1440px;
 
     /* margin */
     --margin-side: 4rem;
