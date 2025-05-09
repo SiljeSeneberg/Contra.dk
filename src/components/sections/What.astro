@@ -14,5 +14,57 @@ import Link from "../assets/Link.astro";
       </div>
       <h4 class="text_blue">TATTOOS | ACESSORIES | JEWELLERY | EVENTS</h4>
     </div>
+    <div class="info">
+      <p>Contra is a vibrant creative space, located in Nørrebro, where four independent brands come together under one roof.</p>
+      <p>From tattoos and raw handcrafted jewelry to unique fashion made from recycled materials, Contra is built on collaboration, care, and creativity.</p>
+      <p>With cozy vibes, ongoing events, and a heartfelt welcome, Contra invites everyone into its warm and inspiring community.</p>
+    </div>
+    <div class="where_when">
+      <p>Jagtvej 76, st.th, 2200 København</p>
+      <p>
+        Man - fre: 10 - 17 <br />
+        Lør: 12 - 17 <br />
+        Søn: lukket
+      </p>
+    </div>
   </div>
 </section>
+
+<style>
+  .what_sec {
+    margin-top: var(--gap-96);
+    margin-left: var(--gap-16);
+    margin-right: var(--gap-16);
+  }
+  .text_blue {
+    color: var(--blue);
+  }
+  .what_h2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+  }
+  .what_sec h2,
+  h4,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .what_title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+    margin-bottom: var(--gap-48);
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+    margin-bottom: var(--gap-48);
+  }
+  .where_when {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+  }
+</style>
