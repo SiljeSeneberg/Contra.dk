@@ -1,0 +1,25 @@
+---
+
+---
+
+<article>
+  <slot />
+</article>
+
+<style>
+  article {
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+    width: 164px;
+    height: auto;
+  }
+  article:hover {
+    filter: blur(0px);
+  }
+  @media (min-width: 900px) {
+    article {
+      width: 264px;
+      height: auto;
+    }
+  }
+</style>
