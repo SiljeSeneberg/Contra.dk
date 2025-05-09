@@ -1,0 +1,35 @@
+---
+import Item from '../assets/Item.astro';
+---
+
+<section id="items_section">
+<Item href="#localpokemom_section" text="Local Poke Mom"><img src="../../../public/img/contra_tat.png" alt="ring"></Item>
+<Item href="#soriano_section" text="Studio Soriano"><img src="../../../public/img/soriano_bag.png" alt="ring"></Item>
+<Item href="#gldhmr_section" text="Guldhammer studio"><img src="../../../public/img/gldhmr_ring.png" alt="ring"></Item>
+<Item href="#nvll_section" text="Nvll+Void Jemlery"><img src="../../../public/img/nvll_bracelet.png" alt="ring"></Item>
+</section>
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap-32);
+        flex-wrap: wrap;
+        margin: var(--margin-tb);
+        min-width: var(--content-min);
+        max-width: var(--content-max);
+    }
+     @media (min-width: 900px){
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap-16);
+        flex-wrap: wrap;
+        margin: var(--margin-tb);
+        min-width: var(--content-min);
+        max-width: var(--content-max);
+    }}
+</style>
