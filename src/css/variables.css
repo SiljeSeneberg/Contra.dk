@@ -29,6 +29,7 @@
   --body-text: "source sans pro", sans-serif;
 
   /* weight */
+  --light-weight: 300;
   --regular-weight: 400;
   --bold-weight: 700;
 
