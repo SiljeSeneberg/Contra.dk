@@ -53,7 +53,7 @@ h4 {
 
 p {
   font-family: var(--body-text);
-  font-size: var(--s-size);
+  font-size: var(--xs-size);
   font-weight: var(--regular-weight);
 }
 
