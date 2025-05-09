@@ -44,7 +44,7 @@
   /* line-height??? */
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 700px) {
   :root {
     /* size */
     --xxs-size: 1rem;
@@ -84,7 +84,7 @@
   --gap-300: 18.75rem;
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 700px) {
   :root {
     /* content */
     --content-min: 1120px;
