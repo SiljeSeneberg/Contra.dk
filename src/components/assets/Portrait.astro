@@ -1,25 +1,57 @@
 ---
-
+const { text } = Astro.props;
 ---
 
-<article>
-  <slot />
-</article>
+<a href="#LocalPokeMom_section">
+  <article>
+    <slot />
+    <div class="show text_box"><p>{text}</p></div>
+  </article>
+</a>
 
 <style>
   article {
-    filter: blur(4px);
-    transition: filter 0.3s ease;
     width: 164px;
     height: auto;
+  }  
+  .show {
+     visibility: visible;
+      opacity: 1;
   }
-  article:hover {
-    filter: blur(0px);
+  .text_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+  }
+  .text_box p {
+   background-color: var(--background-nav);
+   padding: var(--gap-16)
   }
   @media (min-width: 900px) {
     article {
+      filter: blur(4px);
+    transition: filter 0.3s ease;
       width: 264px;
       height: auto;
+    }
+      article:hover {
+    filter: blur(0px);
+  }
+.show {
+     visibility: hidden;
+      opacity: 0;
+  }
+    article:hover .show {
+      visibility: visible;
+      opacity: 1;
     }
   }
 </style>
