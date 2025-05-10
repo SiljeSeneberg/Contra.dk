@@ -23,7 +23,76 @@ import Btn from "../assets/Btn.astro";
           <p>We will post about upcoming events on our instagram.</p>
         </div>
       </div>
-      <Btn variant="primary" />
+      <Btn variant="primary">go to instagram</Btn>
+    </div>
+    <div class="events_img">
+      <img src="../../../public/events_img_placeholder.png" alt="img_placeholder" />
     </div>
   </div>
 </section>
+
+<style>
+  .events_sec {
+    margin-top: var(--gap-96);
+    margin-left: var(--gap-16);
+    margin-right: var(--gap-16);
+  }
+  .text_blue {
+    color: var(--blue);
+  }
+  .events_h2 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-8);
+  }
+  .events_sec h2,
+  h4,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .events_title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+    margin-bottom: var(--gap-48);
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+    margin-bottom: var(--gap-48);
+  }
+  .where_when {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+  }
+
+  @media screen and (min-width: 900px) {
+    .events_container {
+      display: flex;
+      flex-direction: column;
+      margin-left: var(--margin-side);
+    }
+    .events_sec {
+      max-width: var(--content-max);
+      min-width: var(--content-min);
+      margin-left: var(--margin-side);
+      margin-right: var(--margin-side);
+      margin-top: var(--gap-128);
+      margin-bottom: var(--margin-tb);
+    }
+    .events_h2 {
+      flex-direction: row;
+    }
+    .info {
+      max-width: 760px;
+    }
+    .text_flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+</style>
