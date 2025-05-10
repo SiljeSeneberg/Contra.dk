@@ -55,6 +55,7 @@ p {
   font-family: var(--body-text);
   font-size: var(--xs-size);
   font-weight: var(--regular-weight);
+  line-height: 27px;
 }
 
 /* IMG - VIDEO */
