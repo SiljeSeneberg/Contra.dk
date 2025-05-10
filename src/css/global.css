@@ -14,6 +14,12 @@ li {
 }
 
 /* LAYOUT */
+/* main {
+  display: grid;
+  grid-template-columns:
+    minmax(var(--side), 1fr) minmax(var(--content-min), var(--content-max))
+    minmax(var(--side), 1fr);
+} */
 
 /* TEXT */
 .h1_bold {
