@@ -15,7 +15,9 @@ import Btn from "../assets/Btn.astro";
       </div>
       <h4 class="text_blue">MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS</h4>
     </div>
+    <div class="desktop_flex">
     <div class="text_flex">
+     
       <div class="info">
         <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
 
@@ -30,6 +32,7 @@ import Btn from "../assets/Btn.astro";
     <div class="events_img">
       <img src="../../../public/events_img_placeholder.png" alt="img_placeholder" />
     </div>
+</div>
   </div>
 </section>
 
@@ -89,15 +92,23 @@ import Btn from "../assets/Btn.astro";
     .events_h2 {
       flex-direction: row;
     }
+   
     .info {
       max-width: 760px;
+      gap: var(--gap-96);
     }
     .text_flex {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      
     }
     .events_img{
         max-width: 320px;
     }
+    .desktop_flex{
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-48);
+    }
+
 </style>
