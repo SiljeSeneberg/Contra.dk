@@ -1,10 +1,13 @@
 ---
-
+const { text } = Astro.props;
 ---
 
-<article>
-  <slot />
-</article>
+<a href="#LocalPokeMom_section">
+  <article>
+    <slot />
+    <div class="show text_box">{text}</div>
+  </article>
+</a>
 
 <style>
   article {
@@ -16,10 +19,19 @@
   article:hover {
     filter: blur(0px);
   }
+  .show {
+    visibility: hidden;
+    opacity: 0;
+  }
   @media (min-width: 900px) {
     article {
       width: 264px;
       height: auto;
+    }
+
+    article:hover .show {
+      visibility: visible;
+      opacity: 1;
     }
   }
 </style>
