@@ -35,6 +35,8 @@ li {
   font-size: var(--xxl-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
+   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .h3 {
