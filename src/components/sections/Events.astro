@@ -19,11 +19,13 @@ import Btn from "../assets/Btn.astro";
       <div class="info">
         <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
 
-        <div class="p_bold text_blue">
-          <p>We will post about upcoming events on our instagram.</p>
+        <div class="text_blue">
+          <p class="p_bold">We will post about upcoming events on our instagram.</p>
         </div>
       </div>
-      <Btn variant="primary">go to instagram</Btn>
+      <div class="events_btn">
+        <Btn variant="primary">go to instagram</Btn>
+      </div>
     </div>
     <div class="events_img">
       <img src="../../../public/events_img_placeholder.png" alt="img_placeholder" />
@@ -60,13 +62,14 @@ import Btn from "../assets/Btn.astro";
   .info {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-16);
+    gap: var(--gap-48);
     margin-bottom: var(--gap-48);
   }
-  .where_when {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-16);
+  .events_btn {
+    margin-bottom: var(--gap-48);
+  }
+  .p_bold {
+    font-weight: var(--bold-weight);
   }
 
   @media screen and (min-width: 900px) {
@@ -94,5 +97,7 @@ import Btn from "../assets/Btn.astro";
       flex-direction: column;
       justify-content: space-between;
     }
-  }
+    .events_img{
+        max-width: 320px;
+    }
 </style>
