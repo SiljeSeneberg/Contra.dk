@@ -1,8 +1,8 @@
 ---
-const { variant } = Astro.props;
+const { variant, id } = Astro.props;
 ---
 
-<button class={variant}><slot /></button>
+<button class={variant} id={id}><slot /></button>
 
 <style>
   button {
