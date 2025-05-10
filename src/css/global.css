@@ -19,9 +19,7 @@ li {
 
 /* LAYOUT */
 main {
-  max-width: var(--content-max);
-  margin-left: var(--margin-side);
-  margin-right: var(--margin-side); 
+  max-width: var(--content-max);s
 }
 
 /* TEXT */
