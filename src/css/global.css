@@ -30,25 +30,26 @@ li {
   text-transform: uppercase;
 }
 
-h2 {
+.h2 {
   font-family: var(--primary-header);
   font-size: var(--xxl-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
 }
 
-h3 {
+.h3 {
   font-family: var(--secondary-header);
   font-size: var(--m-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
 }
 
-h4 {
+.h4 {
   font-family: var(--secondary-header);
   font-size: var(--xs-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
+  color: var(--secondary-text);
 }
 
 p {
@@ -56,6 +57,13 @@ p {
   font-size: var(--xs-size);
   font-weight: var(--regular-weight);
   line-height: 27px;
+}
+p.bold {
+  font-family: var(--body-text);
+  font-size: var(--xs-size);
+  font-weight: var(--bold-weight);
+  line-height: 27px;
+  color: var(--secondary-text);
 }
 
 /* IMG - VIDEO */
