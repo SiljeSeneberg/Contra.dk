@@ -11,9 +11,9 @@ import Btn from "../assets/Btn.astro";
   <div class="events_container">
     <div class="events_title">
       <div class="events_h2">
-        <h2>our</h2><h2 class="text_blue">events</h2>
+        <h1 class="h2">our</h1><h1 class="h2 text_blue">events</h1>
       </div>
-      <h4 class="text_blue">MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS</h4>
+      <h2 class="h4 text_blue">MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS</h2>
     </div>
     <div class="desktop_flex">
     <div class="text_flex">
@@ -22,7 +22,7 @@ import Btn from "../assets/Btn.astro";
         <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
 
         <div class="text_blue">
-          <p class="p_bold">We will post about upcoming events on our instagram.</p>
+          <p class="bold">We will post about upcoming events on our instagram.</p>
         </div>
       </div>
       <div class="events_btn">
@@ -71,21 +71,14 @@ import Btn from "../assets/Btn.astro";
   .events_btn {
     margin-bottom: var(--gap-48);
   }
-  .p_bold {
-    font-weight: var(--bold-weight);
-  }
 
   @media screen and (min-width: 900px) {
     .events_container {
       display: flex;
       flex-direction: column;
-      margin-left: var(--margin-side);
     }
     .events_sec {
-      max-width: var(--content-max);
       min-width: var(--content-min);
-      margin-left: var(--margin-side);
-      margin-right: var(--margin-side);
       margin-top: var(--gap-128);
       margin-bottom: var(--margin-tb);
     }
