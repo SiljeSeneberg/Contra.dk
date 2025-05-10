@@ -1,35 +1,40 @@
 ---
-import Item from '../assets/Item.astro';
+import Item from "../assets/Item.astro";
 ---
 
 <section id="items_section">
-<Item href="#localpokemom_section" text="Local Poke Mom"><img src="../../../public/items/contra_tat.png" alt="ring"></Item>
-<Item href="#soriano_section" text="Studio Soriano"><img src="../../../public/items/soriano_bag.png" alt="ring"></Item>
-<Item href="#gldhmr_section" text="Guldhammer studio"><img src="../../../public/items/gldhmr_ring.png" alt="ring"></Item>
-<Item href="#nvll_section" text="Nvll+Void Jemlery"><img src="../../../public/items/nvll_bracelet.png" alt="ring"></Item>
+  <Item href="#localpokemom_section" text="Local Poke Mom"
+    ><img src="../../../public/items/contra_tat.png" alt="ring" /></Item
+  >
+  <Item href="#soriano_section" text="Studio Soriano"
+    ><img src="../../../public/items/soriano_bag.png" alt="ring" /></Item
+  >
+  <Item href="#gldhmr_section" text="Guldhammer studio"
+    ><img src="../../../public/items/gldhmr_ring.png" alt="ring" /></Item
+  >
+  <Item href="#nvll_section" text="Nvll+Void Jemlery"
+    ><img src="../../../public/items/nvll_bracelet.png" alt="ring" /></Item
+  >
 </section>
 
 <style>
-    section{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: var(--gap-32);
-        flex-wrap: wrap;
-        margin: var(--margin-tb);
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-32);
+    flex-wrap: wrap;
+    margin-top: var(--margin-tb);
+    margin-bottom: var(--margin-tb);
+  }
+  @media (min-width: 1120px) {
+    section {
+      flex-direction: row;
+      gap: var(--gap-16);
+      flex-wrap: wrap;
+      margin-top: var(--margin-tb);
+      margin-bottom: var(--margin-tb);
     }
-     @media (min-width: 1120px){
-    section{
-        display: flex;
-         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: var(--gap-16);
-        flex-wrap: wrap;
-        padding-top: var(--gap-200);
-        padding-bottom: var(--gap-200);
-        min-width: var(--content-min);
-        max-width: var(--content-max);
-    }}
+  }
 </style>

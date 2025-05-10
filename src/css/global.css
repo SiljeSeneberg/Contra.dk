@@ -7,6 +7,10 @@
 body {
   background-color: var(--background);
   color: var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
@@ -14,12 +18,11 @@ li {
 }
 
 /* LAYOUT */
-/* main {
-  display: grid;
-  grid-template-columns:
-    minmax(var(--side), 1fr) minmax(var(--content-min), var(--content-max))
-    minmax(var(--side), 1fr);
-} */
+main {
+  max-width: var(--content-max);
+  margin-left: var(--margin-side);
+  margin-right: var(--margin-side); 
+}
 
 /* TEXT */
 .h1_bold {

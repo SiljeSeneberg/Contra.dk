@@ -91,10 +91,10 @@
   :root {
     /* content */
     --content-min: 1120px;
-    --content-max: 1440px;
+    --content-max: 1120px;
 
     /* margin */
     --margin-side: 4rem;
-    --margin-tb: 2rem;
+    --margin-tb: 8rem;
   }
 }
