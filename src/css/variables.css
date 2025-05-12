@@ -87,6 +87,13 @@
   --gap-300: 18.75rem;
 }
 
+@media (min-width: 700px) {
+   :root {
+    /* content */
+    --content-min: 480px;
+    --content-max: 820px;}
+}
+
 @media (min-width: 1120px) {
   :root {
     /* content */
