@@ -13,12 +13,12 @@ const { text } = Astro.props;
   article {
     width: 164px;
     height: auto;
-  }  
-  .show {
-     visibility: visible;
-      opacity: 1;
   }
-  .text_box{
+  .show {
+    visibility: visible;
+    opacity: 1;
+  }
+  .text_box {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,26 +29,28 @@ const { text } = Astro.props;
     align-items: center;
     cursor: pointer;
     text-align: center;
-    transition: visibility 0.3s ease, opacity 0.3s ease;
+    transition:
+      visibility 0.3s ease,
+      opacity 0.3s ease;
   }
   .text_box p {
-   background-color: var(--background-nav);
-   padding: var(--gap-16)
+    background-color: var(--background-nav);
+    padding: var(--gap-16);
   }
   @media (min-width: 900px) {
     article {
       filter: blur(4px);
-    transition: filter 0.3s ease;
+      transition: filter 0.3s ease;
       width: 264px;
       height: auto;
     }
-      article:hover {
-    filter: blur(0px);
-  }
-.show {
-     visibility: hidden;
+    article:hover {
+      filter: blur(0px);
+    }
+    .show {
+      visibility: hidden;
       opacity: 0;
-  }
+    }
     article:hover .show {
       visibility: visible;
       opacity: 1;
