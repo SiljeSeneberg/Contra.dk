@@ -21,6 +21,10 @@ li {
 main {
   max-width: var(--content-max);
 }
+section {
+  margin-top: var(--margin-tb);
+  margin-bottom: var(--margin-tb);
+}
 
 /* TEXT */
 .h1_bold {

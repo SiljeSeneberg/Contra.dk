@@ -1,8 +1,11 @@
 ---
-const { variant, id } = Astro.props;
+const { variant, id, href, target } = Astro.props;
+import Link from "./Link.astro";
 ---
 
-<button class={variant} id={id}><slot /></button>
+<Link href={href} target={target}
+  ><button class={variant} id={id}><slot /></button></Link
+>
 
 <style>
   button {
