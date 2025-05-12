@@ -5,7 +5,7 @@ const { text, href } = Astro.props;
 <a href={href} class="portrait_link">
   <article>
     <slot />
-    <div class="show text_box"><p>{text}</p></div>
+    <div class="show text_box"><p class="bold">{text}</p></div>
   </article>
 </a>
 
@@ -51,7 +51,9 @@ const { text, href } = Astro.props;
     }
     .text_box p {
       background-color: var(--background-nav);
+      color: var(--primary-text);
       padding: var(--gap-16);
+      text-transform: uppercase;
     }
   }
 </style>

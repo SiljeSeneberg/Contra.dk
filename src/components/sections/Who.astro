@@ -74,14 +74,12 @@ import Portrait from "../assets/Portrait.astro";
   @media screen and (min-width: 900px) {
     .portrait_container {
       flex-direction: row;
-      gap: var(--gap-0);
       justify-content: space-between;
-    }
-    .portrait_flex {
-      justify-content: space-between;
+      width: max-content;
     }
 
     .portrait_container img {
+      width: 260px;
     }
   }
 </style>
