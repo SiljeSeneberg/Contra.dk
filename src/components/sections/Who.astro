@@ -15,19 +15,24 @@ import Portrait from "../assets/Portrait.astro";
       </p>
     </div>
     <div class="portrait_container">
-      <div class="portrait_flex">
-        <Portrait text="Local PokeMom" href="#local_poke_mom"><img src="../../public/portraits/pokemom.jpg" alt="Local Poke Mom" /> </Portrait>
-        <Portrait text="Studio Soriano" href="#studio_soriano"><img src="../../public/portraits/soriano.jpg" alt="Studio Soriano" /> </Portrait>
-      </div>
-      <div class="portrait_flex">
-        <Portrait text="Guldhammer Studio" href="#guldhammer_studio"><img src="../../public//portraits/guldhammer.jpg" alt="Guldhammer Studio" /> </Portrait>
-        <Portrait text="NVLL+Void" href="#nvll_void"><img src="../../public/portraits/nvll-void.jpg" alt="NVLL+Void" /> </Portrait>
-      </div>
+      <!--  <div class="portrait_flex"> -->
+      <Portrait text="Local PokeMom" href="#local_poke_mom"><img src="../../public/portraits/pokemom.jpg" alt="Local Poke Mom" /> </Portrait>
+      <Portrait text="Studio Soriano" href="#studio_soriano"><img src="../../public/portraits/soriano.jpg" alt="Studio Soriano" /> </Portrait>
+      <!-- </div> -->
+      <!-- <div class="portrait_flex"> -->
+      <Portrait text="Guldhammer Studio" href="#guldhammer_studio"><img src="../../public//portraits/guldhammer.jpg" alt="Guldhammer Studio" /> </Portrait>
+      <Portrait text="NVLL+Void" href="#nvll_void"><img src="../../public/portraits/nvll-void.jpg" alt="NVLL+Void" /> </Portrait>
+      <!-- </div> -->
     </div>
   </div>
 </section>
 
 <style>
+  .who_sec {
+    margin-top: var(--gap-96);
+    margin-left: var(--gap-16);
+    margin-right: var(--gap-16);
+  }
   .who_h2 {
     display: flex;
     flex-direction: column;
@@ -49,20 +54,34 @@ import Portrait from "../assets/Portrait.astro";
     gap: var(--gap-16);
     margin-bottom: var(--gap-48);
   }
-  .portrait_flex {
+  /*   .portrait_flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
   .portrait_container {
     display: flex;
-    flex-direction: column;
-    gap: var(--gap-32);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-48);
   }
   .portrait_container img {
     width: 164px;
     height: auto;
     margin-bottom: 0;
     padding: 0;
+  }
+  @media screen and (min-width: 900px) {
+    .portrait_container {
+      flex-direction: row;
+      gap: var(--gap-0);
+      justify-content: space-between;
+    }
+    .portrait_flex {
+      justify-content: space-between;
+    }
+
+    .portrait_container img {
+    }
   }
 </style>

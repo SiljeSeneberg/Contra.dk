@@ -2,7 +2,7 @@
 const { text, href } = Astro.props;
 ---
 
-<a href={href}>
+<a href={href} class="portrait_link">
   <article>
     <slot />
     <div class="show text_box"><p>{text}</p></div>
@@ -33,10 +33,7 @@ const { text, href } = Astro.props;
       visibility: visible;
       opacity: 1;
     }
-    .show {
-      visibility: visible;
-      opacity: 1;
-    }
+
     .text_box {
       position: absolute;
       top: 0;

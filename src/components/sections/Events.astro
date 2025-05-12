@@ -16,23 +16,22 @@ import Btn from "../assets/Btn.astro";
       <h2 class="h4 text_blue">MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS</h2>
     </div>
     <div class="desktop_flex">
-    <div class="text_flex">
-     
-      <div class="info">
-        <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
+      <div class="text_flex">
+        <div class="info">
+          <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
 
-        <div class="text_blue">
-          <p class="bold">We will post about upcoming events on our instagram.</p>
+          <div class="text_blue">
+            <p class="bold">We will post about upcoming events on our instagram.</p>
+          </div>
+        </div>
+        <div class="events_btn">
+          <Btn variant="primary">go to instagram</Btn>
         </div>
       </div>
-      <div class="events_btn">
-        <Btn variant="primary">go to instagram</Btn>
+      <div class="events_img">
+        <img src="../../../public/events_img_placeholder.png" alt="img_placeholder" />
       </div>
     </div>
-    <div class="events_img">
-      <img src="../../../public/events_img_placeholder.png" alt="img_placeholder" />
-    </div>
-</div>
   </div>
 </section>
 
@@ -42,7 +41,7 @@ import Btn from "../assets/Btn.astro";
     margin-left: var(--gap-16);
     margin-right: var(--gap-16);
   }
- 
+
   .events_h2 {
     display: flex;
     flex-direction: row;
@@ -83,7 +82,7 @@ import Btn from "../assets/Btn.astro";
     .events_h2 {
       flex-direction: row;
     }
-   
+
     .info {
       max-width: 760px;
       gap: var(--gap-96);
@@ -91,15 +90,14 @@ import Btn from "../assets/Btn.astro";
     .text_flex {
       display: flex;
       flex-direction: column;
-      
     }
-    .events_img{
-        max-width: 320px;
+    .events_img {
+      max-width: 320px;
     }
-    .desktop_flex{
-        display: flex;
-        flex-direction: row;
-        gap: var(--gap-48);
+    .desktop_flex {
+      display: flex;
+      flex-direction: row;
+      gap: var(--gap-48);
     }
-
+  }
 </style>
