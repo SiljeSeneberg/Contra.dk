@@ -42,7 +42,7 @@ main {
   font-size: var(--xxl-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
-   margin-top: 0;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -72,6 +72,9 @@ p.bold {
   font-size: var(--xs-size);
   font-weight: var(--bold-weight);
   line-height: 27px;
+  color: var(--secondary-text);
+}
+.text_blue {
   color: var(--secondary-text);
 }
 
