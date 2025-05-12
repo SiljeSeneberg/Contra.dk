@@ -9,7 +9,21 @@ import "../css/global.css";
 import "../css/variables.css";
 import Items from "../components/sections/Items.astro";
 import Guest from "../components/sections/Guests.astro";
-import Brand from "../components/sections/Brand.astro";
+import Brands from "../components/sections/Brands.astro";
+
+// Fetch data from the API
+const data = await fetch(
+  "https://raumuorgifptawjbmnbs.supabase.co/rest/v1/brand_section",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhdW11b3JnaWZwdGF3amJtbmJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwNTAwMDUsImV4cCI6MjA2MjYyNjAwNX0.BPy2NGqQAT2SG3hH26mKfa_6qdXFEFIozGsldGafvSg",
+    },
+  }
+).then((res) => res.json());
+
+console.log(data);
 ---
 
 <html lang="en">
@@ -27,7 +41,13 @@ import Brand from "../components/sections/Brand.astro";
       <Header />
       <Items />
       <What />
-      <Brand />
+
+      {
+        data.map((brand) => {
+          return <Brands data={brand} />;
+        })
+      }
+
       <Events />
       <Guest />
     </main>
