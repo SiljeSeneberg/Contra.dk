@@ -15,12 +15,14 @@ import Portrait from "../assets/Portrait.astro";
       </p>
     </div>
     <div class="portrait_container">
-      <Portrait text="Local PokeMom" href="#local_poke_mom"><img src="../../public/portraits/pokemom.jpg" alt="Local Poke Mom" /> </Portrait>
-      <Portrait text="Studio Soriano" href="#studio_soriano"><img src="../../public/portraits/soriano.jpg" alt="Studio Soriano" /> </Portrait>
-    </div>
-    <div class="portrait_container">
-      <Portrait text="Guldhammer Studio" href="#guldhammer_studio"><img src="../../public//portraits/guldhammer.jpg" alt="Guldhammer Studio" /> </Portrait>
-      <Portrait text="NVLL+Void" href="#nvll_void"><img src="../../public/portraits/nvll-void.jpg" alt="NVLL+Void" /> </Portrait>
+      <div class="portrait_flex">
+        <Portrait text="Local PokeMom" href="#local_poke_mom"><img src="../../public/portraits/pokemom.jpg" alt="Local Poke Mom" /> </Portrait>
+        <Portrait text="Studio Soriano" href="#studio_soriano"><img src="../../public/portraits/soriano.jpg" alt="Studio Soriano" /> </Portrait>
+      </div>
+      <div class="portrait_flex">
+        <Portrait text="Guldhammer Studio" href="#guldhammer_studio"><img src="../../public//portraits/guldhammer.jpg" alt="Guldhammer Studio" /> </Portrait>
+        <Portrait text="NVLL+Void" href="#nvll_void"><img src="../../public/portraits/nvll-void.jpg" alt="NVLL+Void" /> </Portrait>
+      </div>
     </div>
   </div>
 </section>
@@ -47,8 +49,20 @@ import Portrait from "../assets/Portrait.astro";
     gap: var(--gap-16);
     margin-bottom: var(--gap-48);
   }
-  .portrait_container {
+  .portrait_flex {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+  }
+  .portrait_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-32);
+  }
+  .portrait_container img {
+    width: 164px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 0;
   }
 </style>
