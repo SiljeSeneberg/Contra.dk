@@ -1,0 +1,56 @@
+---
+const { title, brandname, link, web, web2, ins, link_text, del_to } = Astro.props;
+import Btn from "../assets/Btn.astro";
+---
+
+<section>
+  <div>
+    <h2 class="h3">{title}</h2>
+    <h2 class="h4 text_blue">{brandname}</h2>
+  </div>
+  <div class="flex_container">
+    <div class="video_container">
+      <slot />
+    </div>
+    <div>
+      <div>
+        <p>tekst1</p>
+        <div>
+          <div>
+            <h3 class="h4">Instagram</h3>
+             <Btn href={link} variant="primary">{link_text}</Btn>
+          </div>
+          <div class={web}>
+            <h3 class="h4">Website</h3>
+            <Btn href={link} variant="secondary" target="_blank">{link_text}</Btn>
+          </div>
+        </div>
+      </div>
+
+      <div class={del_to}>
+        <p>tekst2</p>
+        <div>
+          <div class={ins}>
+            <h3 class="h4">Instagram</h3>
+            <Btn href={link} variant="secondary">{link_text}</Btn>
+          </div>
+          <div class={web2}>
+            <h3 class="h4">Website</h3>
+             <Btn href={link} variant="secondary">{link_text}</Btn>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .flex_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-48);
+  }
+  .hide {
+    display: none;
+  }
+</style>
