@@ -1,5 +1,85 @@
 ---
 import Portrait from "../assets/Portrait.astro";
-
 ---
-<Portrait text="Local PokeMom"><img src="../../public/portraits/soriano.jpg" alt="Studio Soriano"> </Portrait>
+
+<section id="who_section" class="who_sec">
+  <div class="who_container">
+    <div class="who_title">
+      <h1 class="h2">who are</h1><h1 class="h2 text_blue">we?</h1>
+      <h2 class="h4">the women behind contra</h2>
+    </div>
+    <div class="who_text">
+      <p>
+        We are four women with our own creative business and own voice - in ink, fabric, and metal. At Contra, we've created a space where creativity flows freely and support is always present. Whether we work with tattoos, jewelry, or fashion, we celebrate each other, and create side by side. who drives us is more than craft — it's connection,
+        warmth, and our collective home.
+      </p>
+    </div>
+    <div class="portrait_container">
+      <!--  <div class="portrait_flex"> -->
+      <Portrait text="Local PokeMom" href="#local_poke_mom"><img src="../../public/portraits/pokemom.jpg" alt="Local Poke Mom" /> </Portrait>
+      <Portrait text="Studio Soriano" href="#studio_soriano"><img src="../../public/portraits/soriano.jpg" alt="Studio Soriano" /> </Portrait>
+      <!-- </div> -->
+      <!-- <div class="portrait_flex"> -->
+      <Portrait text="Guldhammer Studio" href="#guldhammer_studio"><img src="../../public//portraits/guldhammer.jpg" alt="Guldhammer Studio" /> </Portrait>
+      <Portrait text="NVLL+Void" href="#nvll_void"><img src="../../public/portraits/nvll-void.jpg" alt="NVLL+Void" /> </Portrait>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+
+<style>
+  .who_sec {
+    margin-top: var(--gap-96);
+    margin-left: var(--gap-16);
+    margin-right: var(--gap-16);
+  }
+  .who_h2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+  }
+  .who_sec h2,
+  h4,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .who_title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8);
+    margin-bottom: var(--gap-48);
+  }
+  .who_text {
+    gap: var(--gap-16);
+    margin-bottom: var(--gap-48);
+  }
+  /*   .portrait_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } */
+  .portrait_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-48);
+  }
+  .portrait_container img {
+    width: 164px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  @media screen and (min-width: 900px) {
+    .portrait_container {
+      flex-direction: row;
+      justify-content: space-between;
+      width: max-content;
+    }
+
+    .portrait_container img {
+      width: 260px;
+    }
+  }
+</style>
