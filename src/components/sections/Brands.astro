@@ -4,7 +4,7 @@ import Btn from "../assets/Btn.astro";
 const { data } = Astro.props;
 ---
 
-<section>
+<section id={data.id}>
   <div>
     <div>
       <h2 class="h3">{data.title}</h2>
