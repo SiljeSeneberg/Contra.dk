@@ -33,22 +33,59 @@ console.log(data);
   </head>
   <body>
     <div class="background_illustration"></div>
-    <header><Navigation /></header>
+    <div class="allcontent">
+      <header><Navigation /></header>
 
-    <main>
-      <Header />
-      <Items />
-      <What />
-      <Who />
-      {
-        data.map((brand) => {
-          return <Brands data={brand} />;
-        })
-      }
+      <main>
+        <Header />
+        <Items />
+        <What />
+        <Who />
+        {
+          data.map((brand) => {
+            return <Brands data={brand} />;
+          })
+        }
 
-      <Events />
-      <Guest />
-    </main>
-    <Footer />
+        <Events />
+        <Guest />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
+<style>
+  .parallax_wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .background_illustration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.2;
+    background-image: url("/background.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    will-change: transform;
+  }
+
+  .allcontent {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    const bg = document.querySelector(".background_illustration");
+    if (bg) {
+      bg.style.transform = `translateY(${scrolled * 0.01}px)`; // Hastighed
+    }
+  });
+</script>
