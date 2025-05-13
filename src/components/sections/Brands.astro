@@ -4,7 +4,7 @@ import Btn from "../assets/Btn.astro";
 const { data } = Astro.props;
 ---
 
-<section>
+<section id={data.id}>
   <div>
     <div>
       <h2 class="h3">{data.title}</h2>
@@ -25,7 +25,7 @@ const { data } = Astro.props;
                   <div>
                     <h5 class="h4">Website</h5>
                     <Btn
-                      href="https://www.instagram.com/local.poke.mom/"
+                      href={data.web1}
                       variant="secondary"
                       target="_blank"
                     >
