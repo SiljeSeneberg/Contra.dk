@@ -10,18 +10,16 @@ import Link from "../assets/Link.astro";
   <nav class="desktop_nav">
     <div class="desktop_nav_wrapper">
       <ul class="ul_left">
-        <li><Link href="#what" variant="primary">What is Contra?</Link></li>
-        <li><Link href="#who" variant="primary">Who are we?</Link></li>
+        <li><Link href="#what_section" variant="primary">What is Contra?</Link></li>
+        <li><Link href="#who_section" variant="primary">Who are we?</Link></li>
       </ul>
 
       <div class="logo">
-        <Link href="#header" variant="primary"
-          ><img src="/logo.png" alt="logo" /></Link
-        >
+        <Link href="#header_section" variant="primary"><img src="/logo.png" alt="logo" /></Link>
       </div>
       <ul class="ul_right">
-        <li><Link href="#events" variant="primary">Our events</Link></li>
-        <li><Link href="#guests" variant="primary">Guest of Contra</Link></li>
+        <li><Link href="#events_section" variant="primary">Our events</Link></li>
+        <li><Link href="#guest_section" variant="primary">Guest of Contra</Link></li>
       </ul>
     </div>
   </nav>
@@ -30,17 +28,15 @@ import Link from "../assets/Link.astro";
 
   <div class="nav_menu">
     <ul>
-      <li><Link href="#what" variant="primary">What is Contra?</Link></li>
-      <li><Link href="#who" variant="primary">Who are we?</Link></li>
-      <li><Link href="#events" variant="primary">Our events</Link></li>
-      <li><Link href="#guests" variant="primary">Guest of Contra</Link></li>
+      <li><Link href="#what_section" variant="primary">What is Contra?</Link></li>
+      <li><Link href="#who_section" variant="primary">Who are we?</Link></li>
+      <li><Link href="#events_section" variant="primary">Our events</Link></li>
+      <li><Link href="#guest_section" variant="primary">Guest of Contra</Link></li>
     </ul>
   </div>
 
   <div class="navigation">
-    <Link href="#header" variant="primary"
-      ><img src="/logo.png" alt="logo" /></Link
-    >
+    <Link href="#header_section" variant="primary"><img src="/logo.png" alt="logo" /></Link>
     <div class="burger_menu">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -172,4 +168,27 @@ import Link from "../assets/Link.astro";
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
   }
+  /*  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.nav_menu .desktop_nav a[href^="#"]');
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          const topOffset = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+          window.scrollTo({
+            top: topOffset,
+            behavior: "smooth",
+          });
+
+          // Close the burger menu if it's open
+        }
+      });
+    });
+  }); */
 </script>
