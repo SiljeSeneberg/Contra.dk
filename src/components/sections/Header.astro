@@ -6,17 +6,24 @@ import "../../css/variables.css";
 import Link from "../assets/Link.astro";
 ---
 
-<section id="header_section" class="header_sec">
+<section id="header_section">
   <div class="title_video_wrapper">
-    <div class="title">
-      <h1 class="h1_bold">Contra</h1><h1 class="h1_regular">House</h1>
+    <h1 class="size h1_bold">Contra <span class="size h1_regular">House</span></h1>
+    <div class="header_video">
+      <img
+        src="../../../public/video_placeholder.png"
+        alt="video_placeholder"
+      />
     </div>
-    <div class="header_video"><img src="../../../public/video_placeholder.png" alt="video_placeholder" /></div>
   </div>
   <div class="brand_names">
     <ul>
-      <li><Link href="#local_poke_mom" variant="primary">lokal poke mom</Link></li>
-      <li><Link href="#guldhammer" variant="primary">guldhammer studio</Link></li>
+      <li>
+        <Link href="#local_poke_mom" variant="primary">lokal poke mom</Link>
+      </li>
+      <li>
+        <Link href="#guldhammer" variant="primary">guldhammer studio</Link>
+      </li>
 
       <li><Link href="#soriano" variant="primary">studio soriano</Link></li>
       <li><Link href="#nvll+void" variant="primary">nvll+void</Link></li>
@@ -25,18 +32,12 @@ import Link from "../assets/Link.astro";
 </section>
 
 <style>
-  .header_sec {
+  section {
     margin-top: var(--gap-96);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-height: 100vh;
   }
-  .title {
-    display: flex;
-    flex-direction: row;
-    gap: var(--gap-16);
-    margin-bottom: var(--gap-32);
+  .size {
+    margin: 0;
   }
   .header_sec h1 {
     margin: 0;
@@ -61,14 +62,18 @@ import Link from "../assets/Link.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-16);
+    gap: var(--gap-48);
     align-self: stretch;
   }
-
+@media screen and (min-width: 900px){
+  .size{
+    font-size: 3rem;
+  }
+}
   @media screen and (min-width: 1120px) {
-    .header_sec {
-      min-width: var(--content-min);
-    }
+    .size{
+    font-size: var(--xl-size);
+  }
     .brand_names ul {
       display: flex;
       flex-direction: row;
@@ -77,9 +82,6 @@ import Link from "../assets/Link.astro";
       align-self: stretch;
     }
 
-    .title {
-      margin-bottom: var(--gap-16);
-    }
     .header_video {
       min-width: 400px;
       min-height: auto;

@@ -81,7 +81,7 @@
   --gap-96: 6rem;
   --gap-128: 8rem;
   --gap-200: 12.5rem;
-  --gap-300: 18.75rem;
+  --gap-288: 18rem;
 }
 
 @media (min-width: 700px) {
