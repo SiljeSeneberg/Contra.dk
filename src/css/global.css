@@ -26,10 +26,13 @@ main {
   max-width: var(--content-max);
 }
 section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-48);
   margin-top: var(--margin-tb);
   margin-bottom: var(--margin-tb);
 
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
 /* TEXT */
@@ -49,7 +52,7 @@ section {
 
 .h2 {
   font-family: var(--primary-header);
-  font-size: var(--xxl-size);
+  font-size: var(--xl-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
   margin-top: 0;
@@ -88,6 +91,11 @@ p.bold {
 }
 .text_blue {
   color: var(--secondary-text);
+}
+.title_gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-8);
 }
 
 /* IMG - VIDEO */
