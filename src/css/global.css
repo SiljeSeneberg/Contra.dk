@@ -22,7 +22,7 @@ li {
 }
 
 /* LAYOUT */
-main {
+main, header, footer {
   max-width: var(--content-max);
 }
 section {

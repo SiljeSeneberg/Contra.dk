@@ -1,14 +1,12 @@
 ---
-import "../assets/Btn.astro";
-import "../assets/Link.astro";
-import "../../css/global.css";
-import "../../css/variables.css";
 import Link from "../assets/Link.astro";
 ---
 
 <section id="header_section" class="header_sec">
   <div class="title_video_wrapper">
-    <h1 class="size h1_bold">Contra <span class="size h1_regular">House</span></h1>
+    <h1 class="size h1_bold">
+      Contra <span class="size h1_regular">House</span>
+    </h1>
     <div class="header_video">
       <img
         src="../../../public/video_placeholder.png"
@@ -33,11 +31,10 @@ import Link from "../assets/Link.astro";
 
 <style>
   .header_sec {
-     margin-top: var(--gap-96);
+    margin-top: var(--gap-96);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
   .size {
     margin: 0;
@@ -68,15 +65,15 @@ import Link from "../assets/Link.astro";
     gap: var(--gap-48);
     align-self: stretch;
   }
-@media screen and (min-width: 900px){
-  .size{
-    font-size: 3rem;
+  @media screen and (min-width: 900px) {
+    .size {
+      font-size: 3rem;
+    }
   }
-}
   @media screen and (min-width: 1120px) {
-    .size{
-    font-size: var(--xl-size);
-  }
+    .size {
+      font-size: var(--xl-size);
+    }
     .brand_names ul {
       display: flex;
       flex-direction: row;
