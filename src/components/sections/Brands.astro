@@ -6,84 +6,89 @@ const { data } = Astro.props;
 
 <section id={data.id}>
   <div>
-    <div>
-      <h2 class="h3">{data.title}</h2>
-      <h3 class="h4 text_blue">{data.subtitle}</h3>
-    </div>
-    <div class="flex_container">
-      <div>
-        <article>
-          <div>
-            <p>{data.description}</p>
-            <div class="flex_container2">
-              <div>
-                <h4 class="h4">Instagram</h4>
-                <Btn href={data.insta1} variant="primary">{data.btn_text}</Btn>
-              </div>
-              {
-                data.btn_text2 && (
-                  <div>
-                    <h5 class="h4">Website</h5>
-                    <Btn
-                      href={data.web1}
-                      variant="secondary"
-                      target="_blank"
-                    >
-                      {data.btn_text2}
-                    </Btn>
-                  </div>
-                )
-              }
-            </div>
-          </div>
-        </article>
-        <article>
-          <p>{data.description2}</p>
+    <h2 class="h3">{data.title}</h2>
+    <h3 class="h4 text_blue">{data.subtitle}</h3>
+  </div>
+  <div class="flex_container">
+    <div class="article_container">
+      <article>
+        <div>
+          <p>{data.description}</p>
           <div class="flex_container2">
+            <div>
+              <h4 class="h4">Instagram</h4>
+              <Btn href={data.insta1} variant="primary">
+                {data.btn_text}
+              </Btn>
+            </div>
+
             {
-              data.btn_text3 && (
+              data.btn_text2 && (
                 <div>
-                  <h3 class="h4">Instagram</h3>
-                  <Btn href={data.insta2} variant="secondary">
-                    {data.btn_text3}
-                  </Btn>
-                </div>
-              )
-            }
-            {
-              data.btn_text4 && (
-                <div>
-                  <h3 class="h4">Website</h3>
-                  <Btn href={data.web2} variant="secondary">
-                    {data.btn_text4}
+                  <h5 class="h4">Website</h5>
+                  <Btn href={data.web1} variant="secondary" target="_blank">
+                    {data.btn_text2}
                   </Btn>
                 </div>
               )
             }
           </div>
-        </article>
-      </div>
-      <div class="video_container">
-        <img src={data.video} />
-      </div>
+        </div>
+      </article>
+      <article>
+        <p>{data.description2}</p>
+        <div class="flex_container2">
+          {
+            data.btn_text3 && (
+              <div>
+                <h3 class="h4">Instagram</h3>
+                <Btn href={data.insta2} variant="secondary">
+                  {data.btn_text3}
+                </Btn>
+              </div>
+            )
+          }
+          {
+            data.btn_text4 && (
+              <div>
+                <h3 class="h4">Website</h3>
+                <Btn href={data.web2} variant="secondary">
+                  {data.btn_text4}
+                </Btn>
+              </div>
+            )
+          }
+        </div>
+      </article>
+    </div>
+    <div class="video_container">
+      <img src={data.video} />
     </div>
   </div>
 </section>
 
 <style>
+  .flex_container2 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .flex_container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: space-between;
     gap: var(--gap-64);
   }
-    .flex_container2 {
+  .flex_container2 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
+
     gap: var(--gap-64);
+  }
+  .article_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-48);
   }
   .video_container {
     width: 360px;

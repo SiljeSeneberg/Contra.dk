@@ -41,8 +41,6 @@
   --m-size: 1.5rem;
   --l-size: 2rem;
   --xl-size: 3rem;
-
-  /* line-height??? */
 }
 
 @media (min-width: 900px) {
@@ -54,15 +52,12 @@
     --m-size: 2rem;
     --l-size: 3rem;
     --xl-size: 6rem;
-
-    /* line-height??? */
   }
 }
 
 /* SPACING */
 :root {
   /* content */
- /*  --content-min: 320px; */
   --content-max: 480px;
 
   /* margin */
@@ -87,15 +82,13 @@
 @media (min-width: 700px) {
   :root {
     /* content */
-   /*  --content-min: 480px; */
-    --content-max: 820px;
+    --content-max: 720px;
   }
 }
 
 @media (min-width: 1120px) {
   :root {
     /* content */
-   /*  --content-min: 1120px; */
     --content-max: 1120px;
 
     /* margin */
