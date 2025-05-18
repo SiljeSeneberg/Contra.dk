@@ -1,8 +1,39 @@
 ---
+
 ---
 
-<section>
-    <div>
-        <img src="/#" alt="map">
+<section class="map">
+  <div>
+    <div id="footer_section" class="footer_sec">
+      <img src="/kort_contra.png" alt="kort" />
+      <div class="footer_text">
+        <p>© 2025 Contra House.</p>
+        <p>JAGTVEJ 76 ST, TH 2200 COPENHAGEN N</p>
+      </div>
     </div>
+  </div>
 </section>
+
+<style>
+  .footer_text {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer_sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap-64);
+    padding-top: var(--margin-tb);
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
+    margin-bottom: var(--gap-32);
+  }
+  .map p {
+    font-size: var(--xxs-size);
+  }
+  .map img {
+    max-width: 300px;
+  }
+</style>
