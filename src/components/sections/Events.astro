@@ -2,97 +2,69 @@
 import Btn from "../assets/Btn.astro";
 ---
 
-<section id="events_section" class="events_sec">
-  <div class="events_container">
-    <div class="events_title">
-      <div class="events_h2">
-        <h1 class="h2">our</h1><h1 class="h2 text_blue">events</h1>
-      </div>
-      <h2 class="h4 text_blue">MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS</h2>
-    </div>
-    <div class="desktop_flex">
-      <div class="text_flex">
-        <div class="info">
-          <p>At Contra, we host a mix of events that bring our community together. From cute little markets, to heartfelt Charity Events and cozy Gatherings that spark connection. Everybody is welcome at any time in our home, Contra House.</p>
+<section id="events_section">
+  <div class="title_gap">
+    <h1 class="h2">our <span class="text_blue">events</span></h1>
+    <h2 class="h4 text_blue">
+      MARKETS | CHARITY EVENTS | GATHERINGS | CELEBRATIONS
+    </h2>
+  </div>
+  <div class="desktop_flex">
+    <div class="text_flex">
+      <p>
+        At Contra, we host a mix of events that bring our community together.
+        From cute little markets, to heartfelt Charity Events and cozy
+        Gatherings that spark connection. Everybody is welcome at any time in
+        our home, Contra House.
+      </p>
 
-          <div class="text_blue">
-            <p class="bold">We will post about upcoming events on our instagram.</p>
-          </div>
-        </div>
-        <div class="events_btn">
-          <Btn href="https://www.instagram.com/contra_tattoo_studio/" variant="primary" target="_blank">go to instagram</Btn>
-        </div>
+      <div class="btn_container">
+        <p class="bold text_blue">
+          We will post about upcoming events on our instagram.
+        </p>
+
+        <Btn
+          href="https://www.instagram.com/contra_tattoo_studio/"
+          variant="primary"
+          target="_blank">go to instagram</Btn
+        >
       </div>
-      <div class="events_img">
-        <img src="../../../public/events_img_placeholder.png" alt="img_placeholder" />
-      </div>
+    </div>
+    <div class="events_img">
+      <img
+        src="/events_img_placeholder.png"
+        alt="img_placeholder"
+      />
     </div>
   </div>
-</section>
 
-<style>
-  .events_sec {
-    margin-top: var(--gap-96);
-    margin-left: var(--gap-16);
-    margin-right: var(--gap-16);
-  }
-
-  .events_h2 {
-    display: flex;
-    flex-direction: row;
-    gap: var(--gap-8);
-  }
-  .events_sec h2,
-  h4,
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .events_title {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-8);
-    margin-bottom: var(--gap-48);
-  }
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-48);
-    margin-bottom: var(--gap-48);
-  }
-  .events_btn {
-    margin-bottom: var(--gap-48);
-  }
-
-  @media screen and (min-width: 900px) {
-    .events_container {
-      display: flex;
-      flex-direction: column;
-    }
-    .events_sec {
-      min-width: var(--content-min);
-      margin-top: var(--margin-tb);
-      margin-bottom: var(--margin-tb);
-    }
-    .events_h2 {
-      flex-direction: row;
-    }
-
-    .info {
-      max-width: 760px;
-      gap: var(--gap-96);
-    }
+  <style>
     .text_flex {
       display: flex;
       flex-direction: column;
-    }
-    .events_img {
-      max-width: 320px;
-    }
-    .desktop_flex {
-      display: flex;
-      flex-direction: row;
       gap: var(--gap-48);
+      margin-bottom: var(--gap-48);
     }
-  }
-</style>
+    .btn_container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-16);
+      align-items: start;
+    }
+
+    @media screen and (min-width: 900px) {
+      .info {
+        max-width: 760px;
+        gap: var(--gap-96);
+      }
+      .events_img {
+        max-width: 320px;
+      }
+      .desktop_flex {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-48);
+      }
+    }
+  </style>
+</section>

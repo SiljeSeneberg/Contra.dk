@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 /* COLORS */
 :root {
@@ -41,9 +41,6 @@
   --m-size: 1.5rem;
   --l-size: 2rem;
   --xl-size: 3rem;
-  --xxl-size: 3rem;
-
-  /* line-height??? */
 }
 
 @media (min-width: 900px) {
@@ -55,21 +52,16 @@
     --m-size: 2rem;
     --l-size: 3rem;
     --xl-size: 6rem;
-    --xxl-size: 7.5rem;
-
-    /* line-height??? */
   }
 }
 
 /* SPACING */
 :root {
   /* content */
-  --content-min: 320px;
   --content-max: 480px;
 
   /* margin */
-  --margin-side: 0.5rem;
-  --margin-tb: 8rem;
+  --margin-tb: 18rem;
 
   /* gap */
   --gap-0: 0rem;
@@ -84,24 +76,23 @@
   --gap-96: 6rem;
   --gap-128: 8rem;
   --gap-200: 12.5rem;
-  --gap-300: 18.75rem;
+  --gap-288: 18rem;
 }
 
 @media (min-width: 700px) {
-   :root {
+  :root {
     /* content */
-    --content-min: 480px;
-    --content-max: 820px;}
+    --content-max: 720px;
+  }
 }
 
 @media (min-width: 1120px) {
   :root {
     /* content */
-    --content-min: 1120px;
     --content-max: 1120px;
 
     /* margin */
     --margin-side: 4rem;
-    --margin-tb: 8rem;
+    --margin-tb: 18rem;
   }
 }

@@ -1,25 +1,25 @@
 ---
-import "../assets/Btn.astro";
-import "../assets/Link.astro";
-import "../../css/global.css";
-import "../../css/variables.css";
 import Link from "../assets/Link.astro";
 ---
 
 <header class="header">
   <nav class="desktop_nav">
     <div class="desktop_nav_wrapper">
-      <ul class="ul_left">
-        <li><Link href="#what_section" variant="primary">What is Contra?</Link></li>
+      <ul class="ul_desk">
+        <li>
+          <Link href="#what_section" variant="primary">What is Contra?</Link>
+        </li>
         <li><Link href="#who_section" variant="primary">Who are we?</Link></li>
-      </ul>
 
-      <div class="logo">
-        <Link href="#header_section" variant="primary"><img src="/logo.png" alt="logo" /></Link>
-      </div>
-      <ul class="ul_right">
-        <li><Link href="#events_section" variant="primary">Our events</Link></li>
-        <li><Link href="#guest_section" variant="primary">Guest of Contra</Link></li>
+        <Link href="#header_section" variant="primary"
+          ><img src="/logo.png" alt="logo" /></Link
+        >
+        <li>
+          <Link href="#events_section" variant="primary">Our events</Link>
+        </li>
+        <li>
+          <Link href="#guest_section" variant="primary">Guest of Contra</Link>
+        </li>
       </ul>
     </div>
   </nav>
@@ -28,15 +28,21 @@ import Link from "../assets/Link.astro";
 
   <div class="nav_menu">
     <ul>
-      <li><Link href="#what_section" variant="primary">What is Contra?</Link></li>
+      <li>
+        <Link href="#what_section" variant="primary">What is Contra?</Link>
+      </li>
       <li><Link href="#who_section" variant="primary">Who are we?</Link></li>
       <li><Link href="#events_section" variant="primary">Our events</Link></li>
-      <li><Link href="#guest_section" variant="primary">Guest of Contra</Link></li>
+      <li>
+        <Link href="#guest_section" variant="primary">Guest of Contra</Link>
+      </li>
     </ul>
   </div>
 
   <div class="navigation">
-    <Link href="#header_section" variant="primary"><img src="/logo.png" alt="logo" /></Link>
+    <Link href="#header_section" variant="primary"
+      ><img src="/logo.png" alt="logo" /></Link
+    >
     <div class="burger_menu">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -139,22 +145,20 @@ import Link from "../assets/Link.astro";
       left: 0;
       right: 0;
       z-index: 10;
+      justify-content: center;
     }
     .desktop_nav_wrapper {
-      max-width: var(--content-max);
-      min-width: var(--content-min);
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .ul_left,
-    .ul_right {
+
+    .ul_desk {
       display: flex;
       flex-direction: row;
       gap: var(--gap-128);
       padding-left: 0;
-      /* margin-right: var(--gap-48); */
+      align-items: center;
     }
   }
 </style>
