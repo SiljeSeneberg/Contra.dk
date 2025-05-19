@@ -62,7 +62,10 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <img src={data.video} />
+      <video id="myVideo" src={data.video}
+        >Your browser does not support the video tag.</video
+      >
+      <button id="playButton">▶</button>
     </div>
   </div>
 </section>
@@ -91,6 +94,7 @@ const { data } = Astro.props;
     gap: var(--gap-48);
   }
   .video_container {
+    position: relative;
     width: 360px;
     height: auto;
     object-fit: cover;
@@ -98,6 +102,23 @@ const { data } = Astro.props;
   }
   p {
     max-width: 650px;
+  }
+  #playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
@@ -110,3 +131,13 @@ const { data } = Astro.props;
     }
   }
 </style>
+
+<script>
+  const video = document.getElementById("myVideo");
+  const playButton = document.getElementById("playButton");
+
+  playButton.addEventListener("click", () => {
+    video.play();
+    playButton.style.display = "none";
+  });
+</script>
