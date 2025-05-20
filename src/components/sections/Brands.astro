@@ -62,9 +62,7 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <video id="myVideo" src={data.video}
-        >Your browser does not support the video tag.</video
-      >
+      <video id="myVideo" src={data.video}>Your browser does not support the video tag.</video>
       <button id="playButton">▶</button>
     </div>
   </div>
@@ -100,9 +98,7 @@ const { data } = Astro.props;
     object-fit: cover;
     border-radius: var(--border-radius-8);
   }
-  p {
-    max-width: 650px;
-  }
+
   #playButton {
     position: absolute;
     top: 50%;

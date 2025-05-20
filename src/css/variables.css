@@ -62,11 +62,9 @@
 /* SPACING */
 :root {
   /* content */
-
-  --content-max: 480px;
+  --content-max: 100vw;
 
   /* margin */
-  --margin-side: 0.5rem;
   --margin-tb: 8rem;
 
   /* gap */
@@ -92,7 +90,7 @@
     --content-max: 1120px;
 
     /* margin */
-    --margin-side: 4rem;
-    --margin-tb: 8rem;
+
+    --margin-tb: 18rem;
   }
 }
