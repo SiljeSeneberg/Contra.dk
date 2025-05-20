@@ -41,6 +41,9 @@
   --m-size: 1.5rem;
   --l-size: 2rem;
   --xl-size: 3rem;
+  --xxl-size: 3rem;
+
+  /* line-height??? */
 }
 
 @media (min-width: 900px) {
@@ -52,16 +55,19 @@
     --m-size: 2rem;
     --l-size: 3rem;
     --xl-size: 6rem;
+    --xxl-size: 7.5rem;
   }
 }
 
 /* SPACING */
 :root {
   /* content */
+
   --content-max: 480px;
 
   /* margin */
-  --margin-tb: 18rem;
+  --margin-side: 0.5rem;
+  --margin-tb: 8rem;
 
   /* gap */
   --gap-0: 0rem;
@@ -79,20 +85,14 @@
   --gap-288: 18rem;
 }
 
-@media (min-width: 700px) {
-  :root {
-    /* content */
-    --content-max: 720px;
-  }
-}
-
 @media (min-width: 1120px) {
   :root {
     /* content */
+
     --content-max: 1120px;
 
     /* margin */
     --margin-side: 4rem;
-    --margin-tb: 18rem;
+    --margin-tb: 8rem;
   }
 }
