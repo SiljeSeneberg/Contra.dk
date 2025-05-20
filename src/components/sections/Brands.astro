@@ -62,7 +62,7 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <video id="myVideo" src={data.video}>Your browser does not support the video tag.</video>
+      <iframe width="auto" height="400" src={data.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <button id="playButton">▶</button>
     </div>
   </div>
