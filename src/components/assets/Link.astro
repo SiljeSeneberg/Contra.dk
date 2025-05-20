@@ -1,8 +1,13 @@
 ---
-const { href, variant, target } = Astro.props;
+const { href, variant, target, src } = Astro.props;
 ---
 
-<a href={href} class={variant} target={target}><slot /></a>
+<a href={href} class={variant} target={target}>
+  <slot />
+  <span class="hover-img">
+    <img src={src} alt="Hover icon" />
+  </span></a
+>
 
 <style>
   a {
@@ -12,8 +17,8 @@ const { href, variant, target } = Astro.props;
     text-transform: uppercase;
     cursoer: pointer;
     text-align: center;
+    position: relative; /* Important for positioning the image */
   }
-    
 
   .primary {
     color: var(--primary-text);
@@ -31,6 +36,35 @@ const { href, variant, target } = Astro.props;
   .secondary:hover {
     color: var(--primary-text);
     text-decoration: underline;
+  }
+
+  .tertiary {
+    color: var(--primary-text);
+    text-decoration: none;
+  }
+  .tertiary:hover {
+    color: var(--secondary-text);
+    text-decoration: underline;
+  }
+
+  .hover-img {
+    display: none;
+    position: absolute;
+    top: -800%; /* above the text */
+    left: 80%;
+    transform: translateX(-50%);
+    margin-top: 0.25rem;
+    z-index: 10;
+  }
+
+  .tertiary:hover .hover-img {
+    display: block;
+  }
+
+  /* Optional: Add image size */
+  .hover-img img {
+    width: 200px;
+    height: auto;
   }
 
   @media (min-width: 900px) {
