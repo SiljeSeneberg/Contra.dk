@@ -79,8 +79,6 @@
   --gap-64: 4rem;
   --gap-96: 6rem;
   --gap-128: 8rem;
-  --gap-200: 12.5rem;
-  --gap-288: 18rem;
 }
 
 @media (min-width: 1120px) {
