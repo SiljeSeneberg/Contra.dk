@@ -11,7 +11,7 @@ import Link from "../assets/Link.astro";
         </li>
         <li><Link href="#who_section" variant="primary">Who are we?</Link></li>
 
-        <Link href="#header_section" variant="primary"><img src="/logo.png" alt="logo" /></Link>
+        <Link href="#header_section" variant="primary"><img src="/logo_header.png" alt="logo" /></Link>
         <li>
           <Link href="#events_section" variant="primary">Our events</Link>
         </li>
@@ -38,7 +38,7 @@ import Link from "../assets/Link.astro";
   </div>
 
   <div class="navigation">
-    <Link href="#header_section" variant="primary"><img src="/logo.png" alt="logo" /></Link>
+    <Link href="#header_section" variant="primary"><img src="/logo_header.png" alt="logo" /></Link>
     <div class="burger_menu">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -49,7 +49,7 @@ import Link from "../assets/Link.astro";
 
 <style>
   img {
-    width: 70px;
+    width: 30px;
     height: auto;
   }
   .desktop_nav {
@@ -65,6 +65,9 @@ import Link from "../assets/Link.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--white-70);
+    height: 60px;
+    backdrop-filter: blur(4px);
   }
   .bar {
     display: block;
@@ -143,6 +146,7 @@ import Link from "../assets/Link.astro";
       z-index: 10;
       justify-content: center;
     }
+
     .desktop_nav_wrapper {
       display: flex;
       justify-content: space-between;
