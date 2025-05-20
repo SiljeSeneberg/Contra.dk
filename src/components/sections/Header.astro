@@ -14,21 +14,21 @@ import Link from "../assets/Link.astro";
   <div class="brand_names">
     <ul>
       <li>
-        <Link href="#1" variant="primary">lokal poke mom</Link>
+        <Link href="#1" variant="tertiary" src="/items/contra_tat.png">lokal poke mom </Link>
       </li>
       <li>
-        <Link href="#3" variant="primary">guldhammer studio</Link>
+        <Link href="#3" variant="tertiary" src="/items/gldhmr_ring.png">guldhammer studio</Link>
       </li>
 
-      <li><Link href="#2" variant="primary">studio soriano</Link></li>
-      <li><Link href="#4" variant="primary">nvll+void</Link></li>
+      <li><Link href="#2" variant="tertiary" src="/items/soriano_bag.png">studio soriano</Link></li>
+      <li><Link href="#4" variant="tertiary" src="/items/nvll_bracelet.png">nvll+void</Link></li>
     </ul>
   </div>
 </section>
 
 <style>
   .header_sec {
-    margin-top: var(--gap-96);
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +45,7 @@ import Link from "../assets/Link.astro";
     align-items: center;
     gap: var(--gap-24);
     padding: 0;
+    margin: 0;
   }
   .brand_names ul li {
     white-space: nowrap;
