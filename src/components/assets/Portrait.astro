@@ -6,7 +6,9 @@ const { text, href } = Astro.props;
   <article>
     <slot />
     <div class="show text_box">
-      <p class="h4">{text}</p>
+      <div class="text_container">
+        <p class="h4">{text}</p>
+      </div>
     </div>
   </article>
 </a>
@@ -16,10 +18,7 @@ const { text, href } = Astro.props;
     visibility: hidden;
     position: absolute;
   }
-  .text_box p {
-    background-color: var(--background-nav);
-    padding: var(--gap-16);
-  }
+
   @media (min-width: 900px) {
     article {
       filter: blur(4px);
@@ -55,12 +54,14 @@ const { text, href } = Astro.props;
         opacity 0.3s ease;
     }
     .text_box p {
-      background-color: var(--background-nav);
       color: var(--primary-text);
-
       padding: var(--gap-16);
       text-transform: uppercase;
       margin-bottom: 0;
+    }
+    .text_container {
+      background-color: var(--background-nav);
+      width: 100%;
     }
   }
 </style>
