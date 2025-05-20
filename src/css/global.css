@@ -22,8 +22,12 @@ li {
 }
 
 /* LAYOUT */
-main, header, footer {
-  max-width: var(--content-max);
+main,
+header,
+footer {
+  padding-left: var(--gap-16);
+  padding-right: var(--gap-16);
+  max-width: 100vw;
 }
 section {
   display: flex;
@@ -33,6 +37,14 @@ section {
   margin-bottom: var(--margin-tb);
 
   scroll-margin-top: 80px;
+}
+
+@media (min-width: 700px) {
+  main,
+  header,
+  footer {
+    max-width: var(--content-max);
+  }
 }
 
 /* TEXT */
