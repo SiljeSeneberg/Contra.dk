@@ -65,9 +65,10 @@ section {
 
 .h3 {
   font-family: var(--secondary-header);
-  font-size: var(--m-size);
+  font-size: var(--l-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .h4 {

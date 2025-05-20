@@ -4,10 +4,12 @@ const { text, href } = Astro.props;
 import Link from "./Link.astro";
 ---
 
-<article>
-  <div><slot /></div>
-  <div class="show"><Link href={href} variant="primary">{text}</Link></div>
-</article>
+<Link href={href} variant="primary"
+  ><article>
+    <div><slot /></div>
+    <div class="show">{text}</div>
+  </article></Link
+>
 
 <style>
   article {
@@ -32,9 +34,8 @@ import Link from "./Link.astro";
   }
 
   @media (min-width: 900px) {
-
     div {
-      width: 264px;
+      width: 260px;
       height: auto;
     }
     .show {
