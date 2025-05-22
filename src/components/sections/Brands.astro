@@ -62,8 +62,8 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <video id="myVideo" src={data.video}>Your browser does not support the video tag.</video>
-      <button id="playButton">▶</button>
+      <video class="video_player" src={data.video}>Your browser does not support the video tag.</video>
+      <button class="play_button">▶</button>
     </div>
   </div>
 </section>
@@ -103,7 +103,7 @@ const { data } = Astro.props;
     height: 500px;
   }
 
-  #playButton {
+  .play_button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -133,41 +133,37 @@ const { data } = Astro.props;
 </style>
 
 <script>
-  const video = document.getElementById("myVideo");
-  const playButton = document.getElementById("playButton");
-  /*   var mediaVideo = video;
+  document.addEventListener("DOMContentLoaded", () => {
+    const containers = document.querySelectorAll(".video_container");
 
-  playButton.addEventListener("click", () => {
-    if (mediaVideo.paused) {
-      video.play();
-    } else {
-      mediaVideo.paused();
-    }
-  }); */
+    containers.forEach((container) => {
+      const video = container.querySelector(".video_player");
+      const playButton = container.querySelector(".play_button");
 
-  playButton.addEventListener("click", function () {
-    var mediaVideo = video;
-    if (mediaVideo.paused) {
-      mediaVideo.play();
-    } else {
-      mediaVideo.pause();
-    }
-  });
-  // Hide button when video plays
-  video.addEventListener("play", () => {
-    playButton.style.display = "none";
-  });
+      playButton.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+      // Skjul knap
+      video.addEventListener("play", () => {
+        playButton.style.display = "none";
+      });
 
-  // Show button when video pauses
-  video.addEventListener("pause", () => {
-    playButton.style.display = "flex";
-  });
+      // Vis knap
+      video.addEventListener("pause", () => {
+        playButton.style.display = "flex";
+      });
 
-  video.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
+      video.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    });
   });
 </script>
