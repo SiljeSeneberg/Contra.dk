@@ -1,5 +1,7 @@
 ---
 import Link from "../assets/Link.astro";
+
+const { src } = Astro.props;
 ---
 
 <section id="header_section" class="header_sec">
@@ -8,7 +10,8 @@ import Link from "../assets/Link.astro";
       Contra <span class="size h1_regular">House</span>
     </h1>
     <div class="header_video">
-      <img src="/video_placeholder.png" alt="video_placeholder" />
+    <slot />
+     
     </div>
   </div>
   <div class="brand_names">
