@@ -62,7 +62,7 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <iframe width="auto" height="400" src={data.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <video id="myVideo" src={data.video}>Your browser does not support the video tag.</video>
       <button id="playButton">▶</button>
     </div>
   </div>
@@ -135,9 +135,39 @@ const { data } = Astro.props;
 <script>
   const video = document.getElementById("myVideo");
   const playButton = document.getElementById("playButton");
+  /*   var mediaVideo = video;
 
   playButton.addEventListener("click", () => {
-    video.play();
+    if (mediaVideo.paused) {
+      video.play();
+    } else {
+      mediaVideo.paused();
+    }
+  }); */
+
+  playButton.addEventListener("click", function () {
+    var mediaVideo = video;
+    if (mediaVideo.paused) {
+      mediaVideo.play();
+    } else {
+      mediaVideo.pause();
+    }
+  });
+  // Hide button when video plays
+  video.addEventListener("play", () => {
     playButton.style.display = "none";
+  });
+
+  // Show button when video pauses
+  video.addEventListener("pause", () => {
+    playButton.style.display = "flex";
+  });
+
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
   });
 </script>
