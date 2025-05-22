@@ -32,7 +32,7 @@ footer {
 section {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-48);
+  gap: var(--gap-32);
   margin-top: var(--margin-tb);
   margin-bottom: var(--margin-tb);
 

@@ -1,5 +1,4 @@
 ---
-import Btn from "../assets/Btn.astro";
 ---
 
 <section id="guest_section">
@@ -11,7 +10,7 @@ import Btn from "../assets/Btn.astro";
   <p>At Contra House, we occasionally welcome guest tattoo artists to work and share their craft in our creative space. If you're interested in visiting or collaborating as a guest artist, click the Get Info button below to view our guidelines and learn more about what to expect as a guest of the house.</p>
 
   <div>
-    <Btn variant="secondary" id="toggleBtn">Show more</Btn>
+    <button id="toggleBtn">Get info</button>
     <div id="content" class="content">
       <div>
         <p>
@@ -56,6 +55,23 @@ import Btn from "../assets/Btn.astro";
 </section>
 
 <style>
+    button {
+    font-family: var(--secondary-header);
+    font-size: var(--xxs-size);
+    font-weight: var(--regular-weight);
+    text-transform: uppercase;
+    border: 1px solid var(--btn);
+    padding: var(--gap-8) var(--gap-16);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--btn);
+    color: var(--btn-hover-text);
+  }
+  button:hover {
+    background-color: transparent;
+    color: var(--btn);
+  }
   #content {
     display: none;
     margin-top: 10px;
