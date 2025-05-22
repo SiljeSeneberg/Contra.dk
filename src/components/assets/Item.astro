@@ -6,7 +6,7 @@ import Link from "./Link.astro";
 
 <Link href={href} variant="primary"
   ><article>
-    <div><slot /></div>
+    <div class="imgheigt"><slot /></div>
     <div class="show">{text}</div>
   </article></Link
 >
@@ -24,8 +24,13 @@ import Link from "./Link.astro";
   div {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 160px;
     height: auto;
+
+  }
+  .imgheigt{
+    height: 260px;
   }
   .show {
     visibility: visible;
