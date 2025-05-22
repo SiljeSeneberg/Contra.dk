@@ -81,6 +81,7 @@ section {
   font-weight: var(--regular-weight);
   text-transform: uppercase;
   color: var(--primary-text);
+  margin-top: 0;
   margin-bottom: var(--gap-8);
 }
 
@@ -106,7 +107,6 @@ p.bold {
 .title_gap {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-8);
 }
 
 /* IMG - VIDEO */
