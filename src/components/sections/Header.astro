@@ -10,26 +10,41 @@ const { src } = Astro.props;
       Contra <span class="size h1_regular">House</span>
     </h1>
     <div class="header_video">
-    <slot />
-     
+      <video autoplay loop muted playsinline class="video" src="/Round.webm"
+      ></video>
     </div>
   </div>
   <div class="brand_names">
     <ul>
       <li>
-        <Link href="#1" variant="tertiary" src="/products/contra_tat.webp">lokal poke mom </Link>
+        <Link href="#1" variant="tertiary" src="/products/contra_tat.webp"
+          >lokal poke mom
+        </Link>
       </li>
       <li>
-        <Link href="#3" variant="tertiary" src="/products/ring.webp">guldhammer studio</Link>
+        <Link href="#3" variant="tertiary" src="/products/ring.webp"
+          >guldhammer studio</Link
+        >
       </li>
 
-      <li><Link href="#2" variant="tertiary" src="/products/raincoat.webp">studio soriano</Link></li>
-      <li><Link href="#4" variant="tertiary" src="/products/necklace.webp">nvll+void</Link></li>
+      <li>
+        <Link href="#2" variant="tertiary" src="/products/raincoat.webp"
+          >studio soriano</Link
+        >
+      </li>
+      <li>
+        <Link href="#4" variant="tertiary" src="/products/necklace.webp"
+          >nvll+void</Link
+        >
+      </li>
     </ul>
   </div>
 </section>
 
 <style>
+  section {
+    gap: 0;
+  }
   .header_sec {
     margin-top: 60px;
     display: flex;
@@ -63,7 +78,6 @@ const { src } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-48);
     align-self: stretch;
   }
   @media screen and (min-width: 900px) {
@@ -84,9 +98,8 @@ const { src } = Astro.props;
     }
 
     .header_video {
-      min-width: 400px;
+      max-width: 100%;
       min-height: auto;
-      margin-bottom: var(--gap-16);
     }
   }
 </style>
