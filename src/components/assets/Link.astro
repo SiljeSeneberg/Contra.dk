@@ -5,7 +5,7 @@ const { href, variant, target, src } = Astro.props;
 <a href={href} class={variant} target={target}>
   <slot />
   <span class="hover-img">
-    <img class="hideImg" src={src} alt="Hover icon" />
+    <img src={src} alt="Hover icon" />
   </span></a
 >
 
@@ -48,9 +48,9 @@ const { href, variant, target, src } = Astro.props;
     color: var(--secondary-text);
     text-decoration: underline;
   }
-  .hideImg{
+/*   .hideImg{
     display: none;
-  }
+  } */
 
   .hover-img {
     display: none;
@@ -76,8 +76,8 @@ const { href, variant, target, src } = Astro.props;
     a {
       font-size: var(--xs-size);
     }
-    .hideImg{
+/*     .hideImg{
     display: block;
-  }
+  } */
   }
 </style>
