@@ -44,6 +44,7 @@ section {
   font-family: var(--primary-header);
   font-size: var(--xl-size);
   font-weight: var(--bold-weight);
+  color: var(--primary-text);
   text-transform: uppercase;
 }
 
@@ -51,6 +52,7 @@ section {
   font-family: var(--primary-header);
   font-size: var(--xl-size);
   font-weight: var(--regular-weight);
+  color: var(--primary-text);
   text-transform: uppercase;
 }
 
@@ -58,6 +60,7 @@ section {
   font-family: var(--primary-header);
   font-size: var(--xl-size);
   font-weight: var(--regular-weight);
+  color: var(--primary-text);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -67,6 +70,7 @@ section {
   font-family: var(--secondary-header);
   font-size: var(--l-size);
   font-weight: var(--regular-weight);
+  color: var(--primary-text);
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -76,7 +80,7 @@ section {
   font-size: var(--xs-size);
   font-weight: var(--regular-weight);
   text-transform: uppercase;
-  color: var(--secondary-text);
+  color: var(--primary-text);
   margin-bottom: var(--gap-8);
 }
 
@@ -84,6 +88,7 @@ p {
   font-family: var(--body-text);
   font-size: var(--xs-size);
   font-weight: var(--regular-weight);
+  color: var(--primary-text);
   line-height: 27px;
   max-width: 820px;
   margin-top: 0;
