@@ -69,14 +69,15 @@ const { data } = Astro.props;
 </section>
 
 <style>
+
   .flex_container2 div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .flex_container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     gap: var(--gap-64);
   }
