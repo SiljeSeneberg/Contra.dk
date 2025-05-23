@@ -10,7 +10,7 @@ const { src } = Astro.props;
       Contra <span class="size h1_regular">House</span>
     </h1>
     <div class="header_video">
-      <video autoplay loop muted playsinline class="video" src="/round_2.webm"
+      <video autoplay loop muted playsinline class="video" src="/round.webm"
       ></video>
     </div>
   </div>
@@ -42,9 +42,6 @@ const { src } = Astro.props;
 </section>
 
 <style>
-  section {
-    gap: 0;
-  }
   .header_sec {
     margin-top: 60px;
     display: flex;
@@ -64,10 +61,11 @@ const { src } = Astro.props;
     gap: var(--gap-24);
     padding: 0;
     margin: 0;
+    margin-top: -32px;
   }
-  .brand_names ul li {
+  /* .brand_names ul li {
     white-space: nowrap;
-  }
+  } */
 
   .header_video {
     max-width: 700px;
@@ -75,9 +73,7 @@ const { src } = Astro.props;
     margin-top: -15px;
     margin-left: -100px;
     margin-right: -100px;
-    overflow: hidden;
     z-index: -11;
-
   }
   .title_video_wrapper {
     display: flex;
@@ -100,14 +96,13 @@ const { src } = Astro.props;
       justify-content: space-between;
       gap: var(--gap-128);
       align-self: stretch;
+      margin-top: 0;
     }
 
     .header_video {
       max-width: 100%;
       min-height: auto;
-       margin-top: 0;
-    margin-left: -100px;
-    margin-right: -100px;
+      margin-top: 0;
     }
   }
 </style>
