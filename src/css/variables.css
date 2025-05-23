@@ -10,6 +10,10 @@
   font-family: cinzel;
   src: url("/cinzel.woff2");
 }
+@font-face {
+  font-family: manrope;
+  src: url("/manrope.woff2");
+}
 /* COLORS */
 :root {
   /* Brand */
@@ -36,7 +40,7 @@
   /* family */
   --primary-header: "cinzel decorative";
   --secondary-header: "cinzel";
-  --body-text: "Manrope", sans-serif;
+  --body-text: "manrope", sans-serif;
 
   /* weight */
   --light-weight: 200;
