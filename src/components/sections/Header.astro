@@ -47,6 +47,7 @@ const { dat } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--gap-48);
   }
   .size {
     margin: 0;
@@ -74,11 +75,8 @@ const { dat } = Astro.props;
     text-transform: uppercase;
   }
   .header_video {
-    max-width: 700px;
+    max-width: 480px;
     min-height: auto;
-    margin-top: -15px;
-    margin-left: -100px;
-    margin-right: -100px;
     z-index: -11;
   }
   .title_video_wrapper {
@@ -86,6 +84,7 @@ const { dat } = Astro.props;
     flex-direction: column;
     align-items: center;
     align-self: stretch;
+    gap: var(--gap-16);
   }
   @media screen and (min-width: 900px) {
     .size {
@@ -93,12 +92,13 @@ const { dat } = Astro.props;
     }
   }
   @media screen and (min-width: 1120px) {
-    section {
-      gap: 0;
-    }
     .size {
       font-size: var(--xl-size);
     }
+     .header_sec {
+   
+    gap: var(--gap-32);
+  }
     .brand_names ul {
       display: flex;
       flex-direction: row;
@@ -109,7 +109,7 @@ const { dat } = Astro.props;
     }
 
     .header_video {
-      max-width: 100%;
+      max-width: 680px;
       min-height: auto;
       margin-top: 0;
     }
