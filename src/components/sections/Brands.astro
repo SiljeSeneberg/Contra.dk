@@ -60,9 +60,7 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <video class="video_player" src={data.video}
-        >Your browser does not support the video tag.</video
-      >
+      <video class="video_player" loading="lazy" src={data.video}>Your browser does not support the video tag.</video>
       <button class="play_button">▶</button>
     </div>
   </div>
