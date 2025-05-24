@@ -93,6 +93,7 @@ p {
   line-height: 27px;
   max-width: 820px;
   margin-top: 0;
+  margin-bottom: 0;
 }
 p.bold {
   font-family: var(--body-text);

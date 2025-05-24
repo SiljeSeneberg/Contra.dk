@@ -45,6 +45,7 @@
   --bold-weight: 700;
 
   /* size */
+  --xxxs-size: 0.7rem; 
   --xxs-size: 0.75rem;
   --xs-size: 1.125rem;
   --s-size: 1.25rem;
@@ -57,6 +58,7 @@
 @media (min-width: 900px) {
   :root {
     /* size */
+    --xxxs-size: 0.875rem;
     --xxs-size: 1rem;
     --xs-size: 1.125rem;
     --s-size: 1.5rem;
