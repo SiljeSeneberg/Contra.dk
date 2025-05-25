@@ -45,13 +45,13 @@
   --bold-weight: 700;
 
   /* size */
-  --xxxs-size: 0.7rem; 
+  --xxxs-size: 0.7rem;
   --xxs-size: 0.75rem;
   --xs-size: 1.125rem;
   --s-size: 1.25rem;
   --m-size: 1.5rem;
   --l-size: 2rem;
-  --xl-size: 3rem;
+  --xl-size: 2.5rem;
   --xxl-size: 3rem;
 }
 

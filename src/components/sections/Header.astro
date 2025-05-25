@@ -6,8 +6,8 @@ const { dat } = Astro.props;
 
 <section id="header_section" class="header_sec">
   <div class="title_video_wrapper">
-    <h1 class="size h1_bold">
-      Contra <span class="size h1_regular">House</span>
+    <h1 class="h1_bold">
+      Contra <span class="h1_regular">House</span>
     </h1>
     <div class="header_video">
       <video autoplay loop muted playsinline class="video" src={dat.video}
@@ -49,9 +49,7 @@ const { dat } = Astro.props;
     align-items: center;
     gap: var(--gap-48);
   }
-  .size {
-    margin: 0;
-  }
+
   .header_sec h1 {
     margin: 0;
   }
@@ -86,19 +84,10 @@ const { dat } = Astro.props;
     align-self: stretch;
     gap: var(--gap-16);
   }
-  @media screen and (min-width: 900px) {
-    .size {
-      font-size: 3rem;
-    }
-  }
   @media screen and (min-width: 1120px) {
-    .size {
-      font-size: var(--xl-size);
+    .header_sec {
+      gap: var(--gap-32);
     }
-     .header_sec {
-   
-    gap: var(--gap-32);
-  }
     .brand_names ul {
       display: flex;
       flex-direction: row;
