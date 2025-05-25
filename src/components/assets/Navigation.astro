@@ -67,6 +67,7 @@ import Link from "../assets/Link.astro";
     align-items: center;
     background-color: var(--white-70);
     height: 60px;
+    z-index: 30;
     backdrop-filter: blur(4px);
   }
   .bar {
@@ -90,6 +91,7 @@ import Link from "../assets/Link.astro";
     transform: translateX(100%);
     background-color: var(--white-70);
     backdrop-filter: blur(4px);
+    z-index: 10;
     transition: transform 0.3s ease-in-out;
   }
   .nav_menu ul {
@@ -112,11 +114,8 @@ import Link from "../assets/Link.astro";
     position: absolute;
     cursor: pointer;
     position: relative;
-    z-index: 10;
   }
-  .burger_menu.active {
-    z-index: 20 !important;
-  }
+
   .burger_menu.active .bar:nth-child(2) {
     opacity: 0;
   }
