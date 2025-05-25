@@ -27,7 +27,6 @@ header,
 footer {
   padding-left: var(--gap-16);
   padding-right: var(--gap-16);
-  max-width: var(--content-max);
 }
 section {
   display: flex;
@@ -35,7 +34,7 @@ section {
   gap: var(--gap-32);
   margin-top: var(--margin-tb);
   margin-bottom: var(--margin-tb);
-
+  max-width: var(--content-max);
   scroll-margin-top: 80px;
 }
 
@@ -46,6 +45,7 @@ section {
   font-weight: var(--bold-weight);
   color: var(--primary-text);
   text-transform: uppercase;
+  margin: 0;
 }
 
 .h1_regular {
@@ -54,6 +54,7 @@ section {
   font-weight: var(--regular-weight);
   color: var(--primary-text);
   text-transform: uppercase;
+  margin: 0;
 }
 
 .h2 {

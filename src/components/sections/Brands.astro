@@ -12,7 +12,7 @@ const { data } = Astro.props;
   <div class="flex_container">
     <div class="article_container">
       <article class="afsnit">
-        <p>{data.description}</p>
+        <div><p>{data.description}</p></div>
         <div class="flex_container2">
           <div class="height">
             <h4 class="h4">Instagram</h4>
@@ -60,7 +60,9 @@ const { data } = Astro.props;
       </article>
     </div>
     <div class="video_container">
-      <video class="video_player" loading="lazy" src={data.video}>Your browser does not support the video tag.</video>
+      <video class="video_player" loading="lazy" src={data.video}
+        >Your browser does not support the video tag.</video
+      >
       <button class="play_button">▶</button>
     </div>
   </div>
@@ -116,7 +118,7 @@ const { data } = Astro.props;
     justify-content: center;
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     .flex_container {
       display: flex;
       flex-direction: row;
