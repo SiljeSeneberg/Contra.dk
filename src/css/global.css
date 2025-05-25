@@ -27,6 +27,7 @@ header,
 footer {
   padding-left: var(--gap-16);
   padding-right: var(--gap-16);
+  max-width: var(--content-max);
 }
 section {
   display: flex;
@@ -34,7 +35,7 @@ section {
   gap: var(--gap-32);
   margin-top: var(--margin-tb);
   margin-bottom: var(--margin-tb);
-  max-width: var(--content-max);
+
   scroll-margin-top: 80px;
 }
 
